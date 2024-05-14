@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: 18
           cache: yarn
+          cache-dependency-path: eve-whmapper-docs/package-lock.json
+
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
