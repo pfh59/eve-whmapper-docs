@@ -23,7 +23,7 @@ const config = {
   organizationName: 'pfh59', // Usually your GitHub org/user name.
   projectName: 'eve-whmapper-docs', // Usually your repo name.
   deploymentBranch : 'gh-pages', 
-  trailingSlash: false
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
