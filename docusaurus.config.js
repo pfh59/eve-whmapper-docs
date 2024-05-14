@@ -13,16 +13,17 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://github.com/pfh59/',
+  url: 'https://github.com/pfh59/eve-whmapper-docs',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/eve-whmapper-docs/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'pfh59', // Usually your GitHub org/user name.
   projectName: 'eve-whmapper-docs', // Usually your repo name.
   deploymentBranch : 'gh-pages', 
+  trailingSlash: false
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
