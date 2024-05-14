@@ -21,7 +21,6 @@ jobs:
           cache: yarn
           #cache-dependency-path: eve-whmapper-docs/package-lock.json
 
-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Test build website
