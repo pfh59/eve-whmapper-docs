@@ -273,8 +273,9 @@ By utilizing these options, players can keep track of the status and characteris
 2. **Delete Selected Systems:**
    - Once you have selected the systems, simply press the `Del` (Delete) key on your keyboard.
 
-3. **Note:**
+:::info
    - **No Confirmation Message:** There will be no confirmation prompt before deletion. Ensure that you have selected the correct systems to avoid accidental deletion.
    - **Locked System Warning:** If you attempt to delete a locked system, a warning notification will be displayed.
    
    ![Delete lock system warning notification](../assets/img/map/del_lock_system_notification.png)
+:::
