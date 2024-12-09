@@ -4,7 +4,10 @@ title: Release Notes
 
 ---
 ## EVE Wormhole Mapper v1.1.2
-Read [**What’s new in EVE-WHMAPPER v1.1.1**](https://github.com/pfh59/eve-whmapper/releases/tag/v1.1.2)
+Read [**What’s new in EVE-WHMAPPER v1.1.2**](https://github.com/pfh59/eve-whmapper/releases/tag/v1.1.3)
+
+## EVE Wormhole Mapper v1.1.2
+Read [**What’s new in EVE-WHMAPPER v1.1.2**](https://github.com/pfh59/eve-whmapper/releases/tag/v1.1.2)
 
 ## EVE Wormhole Mapper v1.1.1
 Read [**What’s new in EVE-WHMAPPER v1.1.1**](https://github.com/pfh59/eve-whmapper/releases/tag/v1.1.1)
