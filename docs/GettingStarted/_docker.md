@@ -18,38 +18,83 @@ Before proceeding, ensure Docker is installed on your system. Follow the appropr
 ### Get Docker-Compose Template
 
 1. Navigate to your desired installation location.
-2. Clone the Eve-Whmapper repository. It is recommended to install in `/opt/`.
+2. Clone the Eve-Whmapper repository. It is recommended to install in `/opt/` for Linux or a suitable directory for Windows.
+
+<details>
+<summary>Linux</summary>
 
 ```shell
 sudo git clone https://github.com/pfh59/eve-whmapper.git
 cd eve-whmapper/deploy/docker
 ```
+</details>
+
+<details>
+<summary>Windows</summary>
+
+```powershell
+git clone https://github.com/pfh59/eve-whmapper.git
+cd eve-whmapper/deploy/docker
+```
+</details>
 
 ### Configuration
 
-Configuring Eve-Whmapper is simplified through the initialization script. Run the following script as a sudo or root user and follow the on-screen instructions:
+Configuring Eve-Whmapper is simplified through the initialization script. Run the following script as a sudo or root user on Linux, or as an Administrator on Windows, and follow the on-screen instructions:
+
+<details>
+<summary>Linux</summary>
 
 ```shell
 sudo ./init.sh
 ```
+</details>
 
-This script automatically :
+<details>
+<summary>Windows</summary>
+
+```powershell
+./init.ps1
+```
+</details>
+
+This script automatically:
 - Updates all the configurations (docker-compose.yml, haproxy.cfg, nginx.conf) from your response,
-- Initialize all docker container.
-- Create,add and use a strong certifcate to use HTTPS with your domain
-  
-## Start and stop
+- Initializes all Docker containers,
+- Creates, adds, and uses a strong certificate to use HTTPS with your domain.
+
+## Start and Stop
 
 To manage the Docker containers, use the provided scripts:
 
-- **To Start all container** : Use the start.sh script as a sudo or root user.
+<details>
+<summary>Linux</summary>
+
+- **To Start all containers**: Use the start.sh script as a sudo or root user.
 
 ```shell
 sudo ./start.sh
 ```
 
-- **To Stop all container** :  use the script start.sh as a sudo user or root user
+- **To Stop all containers**: Use the stop.sh script as a sudo or root user.
 
 ```shell
 sudo ./stop.sh
 ```
+</details>
+
+<details>
+<summary>Windows</summary>
+
+- **To Start all containers**: Use the start.ps1 script as an Administrator.
+
+```powershell
+./start.ps1
+```
+
+- **To Stop all containers**: Use the stop.ps1 script as an Administrator.
+
+```powershell
+./stop.ps1
+```
+</details>
