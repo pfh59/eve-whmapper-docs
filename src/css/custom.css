@@ -1,34 +1,32 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #256fda;
-  --ifm-color-primary-dark: #2266c8;
-  --ifm-color-primary-darker: #1f5db7;
-  --ifm-color-primary-darkest: #1c54a5;
-  --ifm-color-primary-light: #377add;
-  --ifm-color-primary-lighter: #5a92e3;
-  --ifm-color-primary-lightest: #4886e0;
+  /* Primary brand colors based on your splashscreen */
+  --ifm-color-primary: #3080f0; /* blue swirl */
+  --ifm-color-primary-dark: #2a6fd2;
+  --ifm-color-primary-darker: #245fb5;
+  --ifm-color-primary-darkest: #1e5098;
+  --ifm-color-primary-light: #5da1f4;
+  --ifm-color-primary-lighter: #8bbcf8;
+  --ifm-color-primary-lightest: #bad8fb;
+
+  /* Typography & Layout tweaks */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(48, 128, 240, 0.08);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #9fc0ef;
-  --ifm-color-primary-dark: #8eb4ec;
-  --ifm-color-primary-darker: #7ca9e9;
-  --ifm-color-primary-darkest: #6b9de6;
-  --ifm-color-primary-light: #b1cbf2;
-  --ifm-color-primary-lighter: #c2d7f5;
-  --ifm-color-primary-lightest: #d3e2f8;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Use a soft light-pastel variant of your brand colors */
+  --ifm-color-primary: #7fb6f4;
+  --ifm-color-primary-dark: #6aa8f1;
+  --ifm-color-primary-darker: #559aed;
+  --ifm-color-primary-darkest: #3f8ce9;
+  --ifm-color-primary-light: #a5caf7;
+  --ifm-color-primary-lighter: #bfdaf9;
+  --ifm-color-primary-lightest: #d9e9fc;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.05);
 }
 
+/* Utility class */
 .hidden {
   display: none !important;
 }

@@ -57,7 +57,16 @@ In cases where the login is successful but the character lacks permissions, a no
 
 ## Adding Multiple Characters
 
-Enhance your mapping capabilities by adding multiple EVE characters under the same map. Use the **Add Account** button to input each character. Each character is managed in a separate browser tab, allowing simultaneous monitoring and mapping.
+Enhance your mapping capabilities by adding multiple EVE characters under the same map — even if their access is unauthorized. Use the **Add Account** button to link each character individually.
 
    ![Add Account](../assets/img/authenticate/add_account_btn.png)
+
+All characters appear in the same tab interface:
+
+   ![Mutli Account](../assets/img/authenticate/multi_account.png)
+
+   The currently selected character — the one used for actions in WHMapper — is highlighted with a white circle.
+
+
+
  

@@ -57,12 +57,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/whmapper.png',
       navbar: {
         title: 'EVE-WHMAPPER',
         logo: {
           alt: 'EVE Wormhole Mapper Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           { to: '/home', label: 'Home', position: 'left' },
