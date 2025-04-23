@@ -38,6 +38,26 @@ Pilot tracking provides a dynamic solution for real-time location monitoring of 
 
 This system's ability to maintain real-time awareness supports efficient navigation and discovery in EVE Online's vast and complex wormhole space.
 
+By default, all characters have tracking enabled after authentication (indicated by a green dot on each character badge):
+
+![All Tracking Enabled](../assets/img/map/all_tracking_enable.png)
+
+---
+
+### Enable or Disable Tracking
+
+You can enable or disable tracking individually for each logged-in character.
+
+To do so, right-click on the character’s badge:
+
+- **Untrack** to disable tracking (a red dot will appear on the badge):  
+  ![Disable Tracking](../assets/img/map/disable_tracking.png)
+
+- **Track** to enable tracking (a green dot will appear on the badge):  
+  ![Enable Tracking](../assets/img/map/enable_tracking.png)
+
+
+
 ### Automatic Tagging of Target Systems
 
 The automatic tagging feature assigns sequential letters (A, B, C, etc.) to target systems of the same class originating from the same system. This functionality simplifies navigation and bookmark management within the game.

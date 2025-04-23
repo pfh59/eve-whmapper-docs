@@ -1,3 +1,9 @@
+---
+id: system_infos
+title: System Information
+sidebar_position: 3
+---
+
 # System Information
 
 ## Overview

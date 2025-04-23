@@ -1,3 +1,9 @@
+---
+id: signature
+title: Signature
+sidebar_position: 4
+---
+
 # Signature
 
 ## Introduction
