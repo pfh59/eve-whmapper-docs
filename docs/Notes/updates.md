@@ -3,6 +3,9 @@ id: updates
 title: Release Notes
 
 ---
+## EVE Wormhole Mapper v2.2.2
+Read [**What’s new in EVE-WHMAPPER v2.2.2**](https://github.com/pfh59/eve-whmapper/releases/tag/v2.2.2)
+
 ## EVE Wormhole Mapper v2.2.1
 Read [**What’s new in EVE-WHMAPPER v2.2.1**](https://github.com/pfh59/eve-whmapper/releases/tag/v2.2.1)
 
