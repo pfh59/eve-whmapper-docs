@@ -72,7 +72,7 @@ Tags can be manually adjusted by using the following keys:
 - `Up` : Move tag up
 - `Down` : Move tag down
 
-### Bookmarks exemple in game
+### Bookmarks example in game
 
 Here are examples of how the tags appear, aiding easy navigation:
 - **">> LS - EJC"**: Represents a low-security system tag.

@@ -4,8 +4,6 @@ title: System Information
 sidebar_position: 3
 ---
 
-# System Information
-
 ## Overview
 
 This documentation provides details on how to utilize the system information panel effectively. The panel is equipped with shortcuts to third-party websites for additional data, displays crucial details about the selected system, and offers vital properties and effects, especially for wormhole systems.

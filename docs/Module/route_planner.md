@@ -5,8 +5,6 @@ sidebar_position: 5
 description: Learn how to use the Route Planner panel to calculate optimal routes in WHMapper.
 ---
 
-# Route Planner
-
 ## Overview
 
 The **Route Planner** panel helps you calculate optimal travel paths between systems—either through jump gates or mapped wormholes. It includes:
