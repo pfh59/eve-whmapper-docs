@@ -1,32 +1,425 @@
+/* ============================================================
+   EVE WHMapper – Design System
+   Palette extraite de l'interface de l'application
+   ============================================================ */
+
 :root {
-  /* Primary brand colors based on your splashscreen */
-  --ifm-color-primary: #3080f0; /* blue swirl */
-  --ifm-color-primary-dark: #2a6fd2;
-  --ifm-color-primary-darker: #245fb5;
-  --ifm-color-primary-darkest: #1e5098;
-  --ifm-color-primary-light: #5da1f4;
-  --ifm-color-primary-lighter: #8bbcf8;
-  --ifm-color-primary-lightest: #bad8fb;
+  /* Couleurs primaires (bleu spiral wormhole) */
+  --ifm-color-primary: #4a9fd4;
+  --ifm-color-primary-dark: #3a8fc4;
+  --ifm-color-primary-darker: #3080b0;
+  --ifm-color-primary-darkest: #246090;
+  --ifm-color-primary-light: #5fb0e2;
+  --ifm-color-primary-lighter: #80c4ec;
+  --ifm-color-primary-lightest: #aad8f4;
 
-  /* Typography & Layout tweaks */
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(48, 128, 240, 0.08);
+  /* Fond global – sombre spatial */
+  --ifm-background-color: #1a1d24;
+  --ifm-background-surface-color: #22252d;
+
+  /* Navbar */
+  --ifm-navbar-background-color: #22252d;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(74, 159, 212, 0.2);
+  --ifm-navbar-link-color: #c8d4e0;
+  --ifm-navbar-link-hover-color: #4a9fd4;
+
+  /* Sidebar */
+  --ifm-menu-color: #8892a4;
+  --ifm-menu-color-active: #4a9fd4;
+  --ifm-menu-color-background-active: rgba(74, 159, 212, 0.1);
+  --ifm-menu-color-background-hover: rgba(74, 159, 212, 0.06);
+  --ifm-sidebar-background: #22252d;
+
+  /* Texte */
+  --ifm-font-color-base: #c8d4e0;
+  --ifm-heading-color: #e0eaf4;
+  --ifm-link-color: #4a9fd4;
+  --ifm-link-hover-color: #80c4ec;
+
+  /* Code */
+  --ifm-code-font-size: 92%;
+  --ifm-code-background: rgba(74, 159, 212, 0.08);
+  --docusaurus-highlighted-code-line-bg: rgba(74, 159, 212, 0.15);
+
+  /* Bordures & séparateurs */
+  --ifm-color-emphasis-200: #2a2f3d;
+  --ifm-color-emphasis-300: #333844;
+  --ifm-toc-border-color: #2a2f3d;
+
+  /* Footer */
+  --ifm-footer-background-color: #181b22;
+  --ifm-footer-color: #8892a4;
+  --ifm-footer-link-color: #c8d4e0;
+  --ifm-footer-link-hover-color: #4a9fd4;
+
+  /* Accents EVE */
+  --eve-green: #2fb575;
+  --eve-purple: #7b6bb0;
+  --eve-orange: #f0a030;
+  --eve-red: #d44040;
+
+  /* Cards / panneaux */
+  --ifm-card-background-color: #22252d;
+  --ifm-card-border-radius: 8px;
+  --ifm-global-border-width: 1px;
+  --ifm-color-emphasis-100: #1f2230;
 }
 
-[data-theme='dark'] {
-  /* Use a soft light-pastel variant of your brand colors */
-  --ifm-color-primary: #7fb6f4;
-  --ifm-color-primary-dark: #6aa8f1;
-  --ifm-color-primary-darker: #559aed;
-  --ifm-color-primary-darkest: #3f8ce9;
-  --ifm-color-primary-light: #a5caf7;
-  --ifm-color-primary-lighter: #bfdaf9;
-  --ifm-color-primary-lightest: #d9e9fc;
-
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.05);
+/* Forcer le dark mode globalement */
+html {
+  color-scheme: dark;
 }
 
-/* Utility class */
+/* ============================================================
+   Fond de page
+   ============================================================ */
+body {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+/* ============================================================
+   Navbar
+   ============================================================ */
+.navbar {
+  background-color: var(--ifm-navbar-background-color);
+  border-bottom: 1px solid rgba(74, 159, 212, 0.2);
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #e0eaf4;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.navbar__logo {
+  filter: drop-shadow(0 0 6px rgba(74, 159, 212, 0.5));
+}
+
+/* ============================================================
+   Sidebar
+   ============================================================ */
+.menu {
+  background-color: #1e2129;
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.5rem 0;
+}
+
+.menu__link {
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #8892a4;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.menu__link:hover {
+  color: #4a9fd4;
+  background-color: rgba(74, 159, 212, 0.06);
+  text-decoration: none;
+}
+
+.menu__link--active {
+  color: #4a9fd4 !important;
+  background-color: rgba(74, 159, 212, 0.12) !important;
+  border-left: 2px solid #4a9fd4;
+}
+
+.menu__caret::before {
+  border-color: #8892a4;
+}
+
+/* ============================================================
+   Headings
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ifm-heading-color);
+}
+
+h1 {
+  border-bottom: 1px solid rgba(74, 159, 212, 0.25);
+  padding-bottom: 0.4em;
+}
+
+h2 {
+  color: #c8d4e0;
+}
+
+/* ============================================================
+   Contenu principal
+   ============================================================ */
+.main-wrapper {
+  background-color: var(--ifm-background-color);
+}
+
+article {
+  background-color: var(--ifm-background-color);
+}
+
+/* ============================================================
+   Table des matières (TOC)
+   ============================================================ */
+.table-of-contents {
+  border-left: 2px solid #2a2f3d;
+}
+
+.table-of-contents__link {
+  color: #8892a4;
+  font-size: 0.82rem;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: #4a9fd4;
+  text-decoration: none;
+}
+
+/* ============================================================
+   Tables
+   ============================================================ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #22252d;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table th {
+  background-color: rgba(74, 159, 212, 0.15);
+  color: #e0eaf4;
+  text-align: left;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(74, 159, 212, 0.3);
+}
+
+table td, table th {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #2a2f3d;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:hover td {
+  background-color: rgba(74, 159, 212, 0.05);
+}
+
+/* ============================================================
+   Code blocks
+   ============================================================ */
+code {
+  background-color: rgba(74, 159, 212, 0.08);
+  border: 1px solid rgba(74, 159, 212, 0.15);
+  border-radius: 4px;
+  color: #80c4ec;
+  padding: 0.15em 0.35em;
+  font-size: 0.9em;
+}
+
+pre code {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+}
+
+.prism-code {
+  background-color: #1a1d24 !important;
+  border: 1px solid #2a2f3d;
+  border-radius: 8px;
+}
+
+/* ============================================================
+   Admonitions (note / tip / warning / danger / info)
+   ============================================================ */
+.alert {
+  border-radius: 6px;
+  border-left-width: 4px;
+  background-color: #22252d;
+}
+
+.alert--info {
+  border-left-color: #4a9fd4;
+  background-color: rgba(74, 159, 212, 0.08);
+}
+
+.alert--info .admonition-icon svg {
+  fill: #4a9fd4;
+}
+
+.alert--success,
+.alert--tip {
+  border-left-color: #2fb575;
+  background-color: rgba(47, 181, 117, 0.08);
+}
+
+.alert--success .admonition-icon svg,
+.alert--tip .admonition-icon svg {
+  fill: #2fb575;
+}
+
+.alert--warning {
+  border-left-color: #f0a030;
+  background-color: rgba(240, 160, 48, 0.08);
+}
+
+.alert--warning .admonition-icon svg {
+  fill: #f0a030;
+}
+
+.alert--danger {
+  border-left-color: #d44040;
+  background-color: rgba(212, 64, 64, 0.08);
+}
+
+.alert--danger .admonition-icon svg {
+  fill: #d44040;
+}
+
+.admonition-heading h5 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   Breadcrumbs
+   ============================================================ */
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: #4a9fd4;
+}
+
+.breadcrumbs__link {
+  color: #8892a4;
+}
+
+.breadcrumbs__separator {
+  color: #4a2f3d;
+}
+
+/* ============================================================
+   Pagination
+   ============================================================ */
+.pagination-nav__link {
+  background-color: #22252d;
+  border: 1px solid #2a2f3d;
+  border-radius: 8px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: #4a9fd4;
+  background-color: rgba(74, 159, 212, 0.06);
+  text-decoration: none;
+}
+
+.pagination-nav__label {
+  color: #4a9fd4;
+}
+
+.pagination-nav__sublabel {
+  color: #8892a4;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  border-top: 1px solid rgba(74, 159, 212, 0.15);
+}
+
+.footer__title {
+  color: #e0eaf4;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.footer__link-item {
+  color: #8892a4;
+  font-size: 0.875rem;
+}
+
+.footer__link-item:hover {
+  color: #4a9fd4;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: #4a5060;
+  font-size: 0.78rem;
+}
+
+/* ============================================================
+   Images de documentation
+   ============================================================ */
+.markdown img {
+  border-radius: 8px;
+  border: 1px solid #2a2f3d;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+}
+
+/* ============================================================
+   Scrollbar personnalisée
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1d24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2f3d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a9fd4;
+}
+
+/* ============================================================
+   Utilitaires
+   ============================================================ */
 .hidden {
   display: none !important;
+}
+
+/* Badge de version EVE */
+.eve-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background-color: rgba(74, 159, 212, 0.15);
+  color: #4a9fd4;
+  border: 1px solid rgba(74, 159, 212, 0.3);
+}
+
+/* ============================================================
+   Dark theme overrides (forcer même en mode clair si activé)
+   ============================================================ */
+[data-theme='dark'] {
+  --ifm-color-primary: #4a9fd4;
+  --ifm-color-primary-dark: #3a8fc4;
+  --ifm-color-primary-darker: #3080b0;
+  --ifm-color-primary-darkest: #246090;
+  --ifm-color-primary-light: #5fb0e2;
+  --ifm-color-primary-lighter: #80c4ec;
+  --ifm-color-primary-lightest: #aad8f4;
+  --ifm-background-color: #1a1d24;
+  --ifm-background-surface-color: #22252d;
+  --docusaurus-highlighted-code-line-bg: rgba(74, 159, 212, 0.15);
 }

@@ -64,6 +64,7 @@ const config = {
     ({
       image: 'img/whmapper.png',
       navbar: {
+        style: 'dark',
         title: 'EVE-WHMAPPER',
         logo: {
           alt: 'EVE Wormhole Mapper Logo',
@@ -110,8 +111,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} EVE Wormhole Mapper`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.vsDark,
+        darkTheme: prismThemes.vsDark,
       },
       colorMode: {
         disableSwitch: true,

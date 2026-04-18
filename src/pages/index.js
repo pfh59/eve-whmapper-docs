@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -21,6 +20,11 @@ function HomepageHeader() {
             to="GettingStarted/installation">
             Getting Started
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="home">
+            Explore Docs
+          </Link>
         </div>
       </div>
     </header>
@@ -35,55 +39,7 @@ export default function Home() {
       description={`${siteConfig.tagline}`}>
       <HomepageHeader />
       <main>
-
       </main>
     </Layout>
-  );
-}
-
-function Tile({
-  tile,
-  className,
-}) {
-  const { withBaseUrl } = useBaseUrlUtils();
-
-  return (
-    <div className={clsx('col', className)} >
-      <div className="tile">
-        <img
-          className={styles.tilesImage}
-          alt={tile.title}
-          width={Math.floor(tile.image.width)}
-          height={Math.floor(tile.image.height)}
-          src={withBaseUrl(tile.image.src)}
-          loading="lazy"
-        />
-        <h3 className={clsx(styles.tilesHeading)}>{tile.title}</h3>
-        <p>{tile.links}</p>
-      </div>
-    </div >
-  );
-}
-
-function TilesContainer() {
-  const firstRow = Tiles.slice(0, 4);
-  const secondRow = Tiles.slice(4);
-
-  return (
-    <div className="container text--center">
-      <div className="row margin-bottom--lg">
-        {firstRow.map((tile, idx) => (
-          <Tile tile={tile} key={idx} />
-        ))}
-      </div>
-      <div className="row">
-        {secondRow.map((tile, idx) => (
-          <Tile
-            tile={tile}
-            key={idx}
-          />
-        ))}
-      </div>
-    </div>
   );
 }
