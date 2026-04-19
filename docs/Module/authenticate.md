@@ -38,7 +38,7 @@ Once CCP authentication succeeds, WHMapper checks your instance membership:
 
 - **You don't belong to any instance** — the *No Instance Access* screen is shown. You can create your own instance or ask an administrator to grant you access.
 
-  Refer to the **[Instance](./admin.md)** page for the full walkthrough.
+  Refer to the **[Instance](./instance.md)** page for the full walkthrough.
 
 ## Multiple Characters
 
