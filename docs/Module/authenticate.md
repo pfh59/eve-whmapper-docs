@@ -2,71 +2,55 @@
 id: authenticate
 title: Authenticate
 sidebar_position: 1
+description: How to log in to EVE Wormhole Mapper using CCP's Single Sign-On (SSO).
 ---
 
-# Authentication
-Authenticating with the [Eve Wormhole Mapper](https://github.com/pfh59/eve-whmapper) allows users to utilize their EVE Online account credentials for a seamless login process. This section provides detailed instructions on how to authenticate and manage characters within the mapper.
+EVE Wormhole Mapper authenticates using your EVE Online account via CCP's Single Sign-On (SSO). Your password is never stored — only a secure CCP-issued token is used.
 
-allows users to utilize their EVE Online account credentials for a seamless login process. This section provides detailed instructions on how to authenticate and manage characters within the mapper.
+## Login Flow
 
-## Logging into EVE Wormhole Mapper
+1. **Open Account Settings** — click the **ACCOUNT** button on the main interface.
 
-1. **Access the Account Settings**
+   ![Main interface showing the ACCOUNT button](../assets/img/authenticate/account_btn.png)
 
-   Begin by selecting the **ACCOUNT** button on the main interface. This initiates the authentication flow.
+2. **Initiate Login** — click **Login** to be redirected to the CCP SSO page.
 
-   ![Main Screen](../assets/img/authenticate/account_btn.png)
+   ![Login button to initiate SSO authentication](../assets/img/authenticate/login_btn.png)
 
-2. **Initiate Login**
+3. **Enter CCP Credentials** — input your CCP username and password.
 
-   Click on the **Login** button. This redirects you to the EVE Online's standard account login page, ensuring a secure connection through CCP's Single Sign-On (SSO).
+   ![CCP SSO credential entry page](../assets/img/authenticate/ccp_sso.png)
 
-   ![Login Screen](../assets/img/authenticate/login_btn.png)
+4. **Select a Character** — choose which character to use.
 
-3. **Enter CCP Credentials**
+   ![CCP character selection list](../assets/img/authenticate/ccp_characters.png)
 
-   Input your in-game CCP credentials. This step does not store your password within the application; instead, it uses CCP's secure token-based system to authenticate.
+5. **Authorize Scopes** — review and approve the required access rights.
 
-   ![CCP SSO](../assets/img/authenticate/ccp_sso.png)
+   ![CCP scope authorization screen](../assets/img/authenticate/ccp_authorization.png)
 
-4. **Select Your Character**
+## After Login
 
-   Choose your desired character from the list provided. Verify the CCP access rights to ensure the proper permissions are granted for usage.
+Once CCP authentication succeeds, WHMapper checks your instance membership:
 
-   ![Character Selection](../assets/img/authenticate/ccp_characters.png)
+- **You belong to an instance** — the first accessible map loads automatically.
 
-5. **Authorize the Application**
+  ![Default map displayed after successful authorized login](../assets/img/default_map.png)
 
-   Review and approve the required scopes necessary for the application's functionality. This step enables the proper access to read the mapper data associated with your character.
+- **You don't belong to any instance** — the *No Instance Access* screen is shown. You can create your own instance or ask an administrator to grant you access.
 
-   ![Authorize Scopes](../assets/img/authenticate/ccp_authorization.png)
+  Refer to the **[Instance](./instance.md)** page for the full walkthrough.
 
-## Entering EVE Wormhole Mapper
+## Multiple Characters
 
-### Authorized Access
+You can link several EVE characters to the same session using the **Add Account** button.
 
-Upon successful login, if your character is authorized, the first accessible map for this character displays automatically. You are now ready to start utilizing the wormhole mapping features and visualize your environment.
+![Add Account button to link an additional character](../assets/img/authenticate/add_account_btn.png)
 
-  ![Default map](../assets/img/default_map.png)
+All characters appear in the same tab interface. The active character — used for all mapper actions — is highlighted with a white circle.
 
-### Unauthorized Access
+![Multi-character account tab view](../assets/img/authenticate/multi_account.png)
 
-In cases where the login is successful but the character lacks permissions, a notification message will appear indicating unauthorized access. You may need to contact the administrator to request access.
+---
 
-  ![Unauthorized Access](../assets/img/authenticate/unauthorized.png)
-
-## Adding Multiple Characters
-
-Enhance your mapping capabilities by adding multiple EVE characters under the same map — even if their access is unauthorized. Use the **Add Account** button to link each character individually.
-
-   ![Add Account](../assets/img/authenticate/add_account_btn.png)
-
-All characters appear in the same tab interface:
-
-   ![Mutli Account](../assets/img/authenticate/multi_account.png)
-
-   The currently selected character — the one used for actions in WHMapper — is highlighted with a white circle.
-
-
-
- 
+**Next step →** [Instance Setup](./instance.md)

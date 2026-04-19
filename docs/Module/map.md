@@ -2,6 +2,7 @@
 id: map
 title: Map
 sidebar_position: 2
+description: Navigate, track pilots, manage systems and connections with the EVE WHMapper interactive map.
 ---
 
 ## Introduction
@@ -72,7 +73,7 @@ Tags can be manually adjusted by using the following keys:
 - `Up` : Move tag up
 - `Down` : Move tag down
 
-### Bookmarks exemple in game
+### Bookmarks example in game
 
 Here are examples of how the tags appear, aiding easy navigation:
 - **">> LS - EJC"**: Represents a low-security system tag.
@@ -231,6 +232,9 @@ To manage and update the system, you can edit it using the context menu options.
   - **Friendly:** The wormhole contains allies.
 
     ![Friendly System](../assets/img/map/friendly_system.png)
+  - **Empty:** The wormhole system is empty (green border).
+
+    ![Empty System](../assets/img/map/empty_system.png)
 
 
 ### Editing Connection
@@ -244,14 +248,17 @@ To manage and update the links between systems effectively, you can edit system 
 
   2. **Available Options:**
   
-     - **Define Connection as EOL (End of Life):**
-       - Open the link menu item and toggle the system to `End Of Life`.
+     - **Define Connection EOL Status:**
+       - Open the link context menu and navigate to `EOL Status`:
 
-      ![Eol Menu Item](../assets/img/map/menu_item_link_eol.png)
+       ![EOL Status Menu Item](../assets/img/map/menu_item_link_eol_status.png)
 
-       - This option allows you to mark the connection as nearing its expiration, indicating that the wormhole is approaching the end of its stable phase.
-              
-       ![Eol link](../assets/img/map/eol_link.png)
+       - Select the desired EOL status:
+         - **Normal:** The connection is not approaching end of life.
+         - **EOL -4h:** The connection has approximately 4 hours remaining (dashed purple).
+           - ![EOL -4h link](../assets/img/map/eol_4h_link.png)
+         - **EOL -1h:** The connection has approximately 1 hour remaining (solid purple).
+           - ![EOL -1h link](../assets/img/map/eol_1h_link.png)
   
      - **Define Connection Status:**
        - Open the link menu item for "Status" :
@@ -261,8 +268,8 @@ To manage and update the links between systems effectively, you can edit system 
        - Select the desired status:
          - **Normal:** Regular mass status.
            - ![Normal link](../assets/img/map/normal_link.png)
-         - **Critical:** The wormhole's mass is reaching a critical threshold.
-           - ![Critical link](../assets/img/map/critical_link.png)
+         - **Reduced:** The wormhole's mass has been reduced.
+           - ![Reduced link](../assets/img/map/critical_link.png)
          - **Verge:** The wormhole is on the verge of collapse.
            - ![Verge link](../assets/img/map/verge_link.png)
        

@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://github.com/',
+  url: 'https://pfh59.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/eve-whmapper-docs/',
@@ -64,6 +64,7 @@ const config = {
     ({
       image: 'img/whmapper.png',
       navbar: {
+        style: 'dark',
         title: 'EVE-WHMAPPER',
         logo: {
           alt: 'EVE Wormhole Mapper Logo',
@@ -110,8 +111,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} EVE Wormhole Mapper`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.vsDark,
+        darkTheme: prismThemes.vsDark,
       },
       colorMode: {
         disableSwitch: true,

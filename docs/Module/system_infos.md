@@ -2,9 +2,8 @@
 id: system_infos
 title: System Information
 sidebar_position: 3
+description: View system details, wormhole effects, statics, and add personal notes with the System Information panel.
 ---
-
-# System Information
 
 ## Overview
 

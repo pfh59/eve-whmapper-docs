@@ -1,4 +1,4 @@
-# Deploy on kubernate
+# Deploy on Kubernetes
 
 This section details the deployment process of the application on a Kubernetes cluster. The configuration described here was tested on a Raspberry Pi cluster.
 
@@ -18,7 +18,7 @@ curl -sfL https://get.k3s.io | sh -
 To get the node token, execute:
 
 ```shell
-cat /var/lib/rancher/k3s/server/node-token` 
+cat /var/lib/rancher/k3s/server/node-token
 ```
 
 ### Install Ingress
@@ -65,7 +65,7 @@ The configuration is divided across multiple files.
 
 ### Configure Environment Variables
 
-All service use a same ConfigMap with in **deploys/envs.yaml [ConfigMap]**:
+All services use the same ConfigMap defined in **deploys/envs.yaml [ConfigMap]**:
 - `DOMAIN`:  your domain (ex: map.mycorp.com)
 - `POSTGRES_DB`: your db name
 - `POSTGRESQL_USERNAME`: your db user
@@ -99,7 +99,7 @@ In **deploys/base.yaml [Certificate]**:
 ```
   ex:
     - map.mycorp.com
-    - mappper.mycorp.com
+    - mapper.mycorp.com
 ```
 
 ### Configure Ingress
@@ -150,8 +150,5 @@ ingress.networking.k8s.io/evemapper-ingress unchanged
 To redeploy the application, use:
 
 ```shell
-kubectl rollout restart deployment evemapper-app -n evemapper`
+kubectl rollout restart deployment evemapper-app -n evemapper
 ```
-
-This document is structured to provide clear, sequential instructions for deploying your application on a Kubernetes cluster, especially tailored to the Raspberry Pi setup. Let me know if there are other adjustments or additions you'd like!
-  
