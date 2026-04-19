@@ -2,6 +2,7 @@
 id: signature
 title: Signature
 sidebar_position: 4
+description: Import, update, and manage wormhole signatures using EVE WHMapper's signature module.
 ---
 
 ## Introduction
@@ -49,7 +50,7 @@ The "Signature" section of the EVE Wormhole Mapper documentation provides detail
     Signatures in EVE Online appear and disappear frequently and have an expiration delay. It is very useful to know the expiration delay of wormholes to prevent autocollapse.
 :::
 
-### Avanced Usage With Lazy Delete
+### Advanced Usage With Lazy Delete
 
 - **Unchecked (default)**: Imported signatures will be compared with saved signatures:
   - New signatures appear in **green**.

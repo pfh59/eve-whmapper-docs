@@ -2,6 +2,7 @@
 id: jump
 title: Jump
 sidebar_position: 6
+description: Track all transits through wormhole connections — jump logs, statuses, and ship records.
 ---
 
 ## Introduction

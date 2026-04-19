@@ -2,6 +2,7 @@
 id: map
 title: Map
 sidebar_position: 2
+description: Navigate, track pilots, manage systems and connections with the EVE WHMapper interactive map.
 ---
 
 ## Introduction

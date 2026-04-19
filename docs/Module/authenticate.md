@@ -2,6 +2,7 @@
 id: authenticate
 title: Authenticate
 sidebar_position: 1
+description: How to log in to EVE Wormhole Mapper using CCP's Single Sign-On (SSO).
 ---
 
 EVE Wormhole Mapper authenticates using your EVE Online account via CCP's Single Sign-On (SSO). Your password is never stored — only a secure CCP-issued token is used.
@@ -49,3 +50,7 @@ You can link several EVE characters to the same session using the **Add Account*
 All characters appear in the same tab interface. The active character — used for all mapper actions — is highlighted with a white circle.
 
 ![Multi-character account tab view](../assets/img/authenticate/multi_account.png)
+
+---
+
+**Next step →** [Instance Setup](./instance.md)

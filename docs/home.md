@@ -2,6 +2,7 @@
 id: home
 title: Home
 sidebar_position: 1
+description: Discover EVE Wormhole Mapper — a real-time wormhole mapping tool for EVE Online explorers and corporations.
 ---
 
 ## Welcome to EVE Wormhole Mapper

@@ -2,6 +2,7 @@
 id: start
 title: First Start
 sidebar_position: 2
+description: How to initialize and launch EVE Wormhole Mapper for the first time.
 ---
 
 Setting up EVE Wormhole Mapper for the first time involves a few essential steps to create the database and initialize the necessary components.
@@ -36,3 +37,7 @@ Once these steps are completed, the main page is displayed and the application i
 ## Sign In
 
 For the first login, you need to authenticate your account. Refer to the **[Authentication Module](../Module/authenticate.md)** for detailed instructions.
+
+---
+
+**Next step →** [Authentication](../Module/authenticate.md)

@@ -2,6 +2,7 @@
 id: instance
 title: Instance
 sidebar_position: 7
+description: Create and manage your isolated WHMapper environment — instances, maps, and access control.
 ---
 
 ## Overview
@@ -254,3 +255,7 @@ The maps visible to you depend on two levels of rules:
 2. **Per-map access** — if a map has restrictions configured, only the listed entities can open it, even if they have instance access.
 
 Instance administrators always retain full access to all maps in their own instance, regardless of per-map restrictions.
+
+---
+
+**Next step →** [Using the Map](./map.md)

@@ -2,6 +2,7 @@
 id: installation
 title: Installation
 sidebar_position: 1
+description: Step-by-step installation guide for EVE Wormhole Mapper using Docker or Kubernetes.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -57,3 +58,7 @@ EVE WHMapper can be installed using Docker or Kubernetes. Choose the installatio
 ## Problems?
 
 If you encounter any issues or need assistance, please ask for help on our [GitHub repository](https://github.com/pfh59/eve-whmapper).
+
+---
+
+**Next step →** [First Start](./first_start.md)

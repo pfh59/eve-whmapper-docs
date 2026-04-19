@@ -2,6 +2,7 @@
 id: settings
 title: Settings
 sidebar_position: 8
+description: Customize keyboard shortcuts, mouse/zoom behavior, and map layout in EVE WHMapper.
 ---
 
 ## Introduction

@@ -2,6 +2,7 @@
 id: updates
 title: Release Notes
 sidebar_position: 1
+description: All notable releases and changes to EVE Wormhole Mapper.
 ---
 
 All notable changes to EVE Wormhole Mapper are listed here. Full details are available on the [GitHub releases page](https://github.com/pfh59/eve-whmapper/releases).
