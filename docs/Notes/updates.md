@@ -7,7 +7,10 @@ description: All notable releases and changes to EVE Wormhole Mapper.
 
 All notable changes to EVE Wormhole Mapper are listed here. Full details are available on the [GitHub releases page](https://github.com/pfh59/eve-whmapper/releases).
 
-## EVE Wormhole Mapper v3.2.0 <span class="badge badge--success">Latest</span>
+## EVE Wormhole Mapper v3.2.1 <span class="badge badge--success">Latest</span>
+*May 6, 2026* · Read [**What's new in EVE-WHMAPPER v3.2.1**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.2.1)
+
+## EVE Wormhole Mapper v3.2.0
 *Apr 12, 2026* · Read [**What's new in EVE-WHMAPPER v3.2.0**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.2.0)
 
 ## EVE Wormhole Mapper v3.1.1
