@@ -56,9 +56,13 @@ As an **administrator**, you can define a global list of key systems (e.g., Jita
 
 ### User View
 
-As a **regular user**, you can still create your own custom system list, in addition to those defined by admins.
+As a **primary character**, you can still create your own custom system list, in addition to those defined by admins.
 
 ![User Action Buttons](../assets/img/route/user_action_buttons.png)
+
+:::info Multi-character attribution
+If you have linked several EVE characters to your session (see [Authenticate → Multiple Characters](./authenticate.md#multiple-characters)), any route entry you add — regardless of which character is currently active — is recorded under your **primary character**. The same rule applies to signature imports and notes.
+:::
 
 ---
 
@@ -98,7 +102,7 @@ Once enabled, a **delete icon** will appear next to each entry.
 
 :::caution Admin Permissions
 - **Admins** can remove both global and personal systems.
-- **Regular users** can only delete systems they personally added.
+- **Primary characters** can only delete systems they personally added (i.e. systems recorded under their primary character).
 :::
 
 **Admin View**  
