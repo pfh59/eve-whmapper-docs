@@ -29,6 +29,14 @@ The map in EVE WHMapper is a vital navigational tool for EVE Online players, off
 
 Live synchronization and other map features will significantly boost your efficiency in navigating wormhole space, thereby enriching your overall EVE Online experience. This tool is designed to not only support strategic planning but also cater to impromptu exploration endeavors.
 
+## Real-Time Connection Statistics
+
+The active map displays live connection statistics and a dynamic user count directly on the map interface. This gives all connected pilots an at-a-glance view of how many users are currently active on the map, updating in real time as pilots join or switch tabs.
+
+:::tip
+The user count reflects activity on the **currently active map tab**. Switching to a different map tab updates the count for that map. Make sure your fleet is on the same active map to see accurate numbers.
+:::
+
 ## Pilot Tracking
 
 Pilot tracking provides a dynamic solution for real-time location monitoring of team members, significantly boosting coordination and safety within your operations. This feature seamlessly integrates with the map, delivering the following benefits:

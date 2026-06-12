@@ -246,6 +246,22 @@ Regardless of per-map restrictions, **instance administrators** always retain ac
 
 ---
 
+## Single-Tenant Mode
+
+By default, WHMapper allows multiple instances to be created by any user. **Single-Tenant Mode** restricts this so that only one instance can exist across the entire deployment — once an instance is created, the **CREATE AN INSTANCE** option is locked for all other users.
+
+This is intended for self-hosted deployments where a single corporation or alliance owns the server and should be the sole instance owner.
+
+To enable single-tenant mode, add the following environment variable to your Docker configuration:
+
+```env
+Instances__SingleTenantMode=True
+```
+
+When this mode is active and an instance already exists, users who do not have access to that instance will see the standard [No Access](#no-access) screen without the option to create a new instance.
+
+---
+
 ## Multi-Instance Access
 
 A user can belong to multiple instances simultaneously — either as a direct member, through their corporation, or through their alliance. In that case, WHMapper aggregates all maps from all accessible instances and displays them as tabs in a single view.
