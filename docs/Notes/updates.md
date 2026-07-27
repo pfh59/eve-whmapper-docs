@@ -9,7 +9,14 @@ All notable changes to EVE Wormhole Mapper are listed here. Full details are ava
 
 
 
-## EVE Wormhole Mapper v3.3.0 <span class="badge badge--success">Latest</span>
+## EVE Wormhole Mapper v3.3.1 <span class="badge badge--success">Latest</span>
+*Jul 27, 2026* · Read [**What's new in EVE-WHMAPPER v3.3.1**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.3.1)
+
+:::warning Security fix — upgrade recommended
+This release fixes a missing per-map authorization check in the SignalR hub (allowing cross-corp/alliance intel leakage) and a cookie-fixation privilege escalation issue. All self-hosted instances should upgrade.
+:::
+
+## EVE Wormhole Mapper v3.3.0
 *Jun 12, 2026* · Read [**What's new in EVE-WHMAPPER v3.3.0**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.3.0)
 
 ## EVE Wormhole Mapper v3.2.2
