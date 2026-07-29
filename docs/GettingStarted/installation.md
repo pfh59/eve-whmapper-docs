@@ -9,6 +9,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Docker from "./_docker.md";
 import Kubernetes from "./_kubernetes.md";
+import SelfHosted from "./_selfhosted.md";
 
 ## Technologies
 
@@ -44,7 +45,7 @@ Eve-whmapper requires CCP's SSO authentication API to use the [ESI API](https://
 
 ## Installation
 
-EVE WHMapper can be installed using Docker or Kubernetes. Choose the installation method that best suits your environment.
+EVE WHMapper can be installed using Docker, Kubernetes, or directly on Linux/Windows using the pre-built binaries. Choose the installation method that best suits your environment.
 
 <Tabs>
 <TabItem value="docker" label="Docker" default>
@@ -52,6 +53,9 @@ EVE WHMapper can be installed using Docker or Kubernetes. Choose the installatio
 </TabItem>
 <TabItem value="kubernetes" label="Kubernetes">
 <Kubernetes/>
+</TabItem>
+<TabItem value="selfhosted" label="Self-Hosted (Binary) ⚠️ Beta">
+<SelfHosted/>
 </TabItem>
 </Tabs>
 
