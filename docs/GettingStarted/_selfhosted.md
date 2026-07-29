@@ -5,6 +5,12 @@ import TabItem from '@theme/TabItem';
 
 This guide covers installing Eve Wormhole Mapper directly on Linux Debian or Windows without Docker, using the pre-built binaries published on GitHub Releases.
 
+:::caution Beta — feedback welcome
+This self-hosted (binary) installation method is new and has had limited real-world testing compared to the Docker/Kubernetes methods. Steps may be incomplete or unclear for some environments (distributions, Windows versions, reverse proxy setups, etc.).
+
+If you run into an issue, a step that doesn't work, or anything unclear, please [open an issue on the docs repository](https://github.com/pfh59/eve-whmapper-docs/issues) — your feedback directly helps fix and clarify this guide.
+:::
+
 ## Requirements
 
 | Component | Minimum version |

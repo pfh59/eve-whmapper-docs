@@ -54,7 +54,7 @@ EVE WHMapper can be installed using Docker, Kubernetes, or directly on Linux/Win
 <TabItem value="kubernetes" label="Kubernetes">
 <Kubernetes/>
 </TabItem>
-<TabItem value="selfhosted" label="Self-Hosted (Binary)">
+<TabItem value="selfhosted" label="Self-Hosted (Binary) ⚠️ Beta">
 <SelfHosted/>
 </TabItem>
 </Tabs>
