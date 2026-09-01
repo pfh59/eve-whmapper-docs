@@ -9,7 +9,14 @@ All notable changes to EVE Wormhole Mapper are listed here. Full details are ava
 
 
 
-## EVE Wormhole Mapper v3.3.1 <span class="badge badge--success">Latest</span>
+## EVE Wormhole Mapper v3.3.2 <span class="badge badge--success">Latest</span>
+*Sep 1, 2026* · Read [**What's new in EVE-WHMAPPER v3.3.2**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.3.2)
+
+:::info Drop-in upgrade
+This release hardens the CI/CD supply chain (GitHub Actions pinned to commit SHAs, minimal workflow token permissions, build credentials no longer persisted on the runner) and updates dependencies. No application or database changes — a drop-in upgrade from v3.3.1.
+:::
+
+## EVE Wormhole Mapper v3.3.1
 *Jul 27, 2026* · Read [**What's new in EVE-WHMAPPER v3.3.1**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.3.1)
 
 :::warning Security fix — upgrade recommended
