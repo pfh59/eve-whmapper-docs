@@ -47,9 +47,15 @@ You can link several EVE characters to the same session using the **Add Account*
 
 ![Add Account button to link an additional character](../assets/img/authenticate/add_account_btn.png)
 
-All characters appear in the same tab interface. The active character — used for all mapper actions — is highlighted with a white circle.
+Each linked character appears as a badge in the top bar. The **primary character** — used for all mapper actions and access checks — is highlighted with a white circle.
 
-![Multi-character account tab view](../assets/img/authenticate/multi_account.png)
+![Character badges in the top bar, primary character circled in white](../assets/img/authenticate/multi_account.png)
+
+To change the primary character, right-click another character's badge and choose **Set as Primary**. The maps you can open follow the access rights of the primary character.
+
+![Badge context menu with Set as Primary](../assets/img/set_primary_account.png)
+
+The same menu enables or disables location tracking for each character (see [Map → Pilot Tracking](./map.md#pilot-tracking)).
 
 ---
 

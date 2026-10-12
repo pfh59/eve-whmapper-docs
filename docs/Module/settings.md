@@ -15,9 +15,9 @@ Once saved, these settings are **automatically applied every time your primary c
 
 ## How to Open Settings
 
-Click the **Settings** entry in the left sidebar menu.
+Open the user menu (`⋮` at the top-right of the screen) and click **Settings**.
 
-![Settings entry in the sidebar menu](../assets/img/settings/settings_menu.png)
+![Settings entry in the user menu](../assets/img/settings/settings_menu.png)
 
 The Settings dialog opens with three tabs: **KEYBOARD**, **MOUSE / ZOOM**, and **MAP**.
 

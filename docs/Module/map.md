@@ -65,6 +65,10 @@ To do so, right-click on the character’s badge:
 - **Track** to enable tracking (a green dot will appear on the badge):  
   ![Enable Tracking](../assets/img/map/enable_tracking.png)
 
+Tracking only applies to maps the character can open. When a character has no access to the active map, its badge shows a red dot and the menu displays **No Map Access** instead of Track/UnTrack:
+
+![No Map Access - tracking disabled for this character on the active map](../assets/img/map/tracking_no_map_access.png)
+
 
 
 ### Automatic Tagging of Target Systems
@@ -103,15 +107,15 @@ Selecting systems within the map interface allows you to engage with various mod
   
 ![Selected system](../assets/img/map/selected_system.png)
 
-- **Modules Activated:**
-  - Selecting a system activates the following modules:
-    - **[System Info Module](../Module/system_infos.md)**
-    - **[Signature Module](../Module/signature.md)**
-    - **[Route Planner Module](../Module/route_planner.md)**
+- **Windows Displayed:**
+  - Selecting a system shows the following windows over the map (see [Map Panels](#map-panels)):
+    - **System** and **Notes** — **[System Information](../Module/system_infos.md)**
+    - **Signatures** — **[Signature Module](../Module/signature.md)**
+    - **Routes** — **[Route Planner Module](../Module/route_planner.md)**
 
-  - These modules provide detailed information and tools for efficient navigation.
+  - These windows provide detailed information and tools for efficient navigation.
   
-  ![System Infos, Signature, and Route Planner Modules](../assets/img/map/info_signature_routeplanner.png)
+  ![System, Notes, Signatures and Routes windows over the map](../assets/img/map/info_signature_routeplanner.png)
 
 ### Selecting a Connection
 
@@ -120,13 +124,13 @@ Selecting connections between systems is crucial for managing navigation routes 
 - Connections can also be selected individually with a left-click.
 - The selected connection will appear highlighted.
    
-![Selected link](../assets/img/map/selected_system.png)
+![Selected link](../assets/img/map/selected_link.png)
 
-- **Features Activated:**
-  - Selecting a connection activates the **[Jump Module](../Module/jump.md)**.
-  - This module facilitates management and execution of jumps between systems, streamlining your workflow.
+- **Window Displayed:**
+  - Selecting a connection shows the **Connection** window of the **[Jump Module](../Module/jump.md)** instead of the system windows.
+  - It shows the connection's size, status and jump log.
   
-  ![Jump Module](../assets/img/map/jump_module.png)
+  ![Connection window](../assets/img/map/jump_module.png)
 
 ### Selecting Multiple Systems
 
@@ -141,6 +145,56 @@ The map interface supports selecting multiple systems simultaneously, facilitati
   - Once selected, the systems within the highlighted area will be individually highlighted to indicate inclusion in the selection.
 
   ![Selected systems](../assets/img/map/selected_systems.png)
+
+## Map Panels
+
+The **System**, **Notes**, **Signatures**, **Routes** and **Connection** panels are floating windows displayed over the map. The map stays fully usable around them: clicks, right-clicks and zoom outside a window reach the map.
+
+- **System**, **Notes**, **Signatures** and **Routes** follow the selected system. Default placement: System and Notes top-right, Signatures bottom-left, Routes bottom-right.
+- **Connection** follows the selected connection and replaces the system windows while a connection is selected.
+
+### Move a Window
+
+Drag a window by its **title bar**. The window comes to the front when you press or move it, and always stays inside the map.
+
+### Collapse and Close
+
+Each title bar has two buttons:
+
+- **Collapse arrow** — reduces the window to its title bar, or expands it again.
+- **Close** (`×`) — hides the window.
+
+![System window collapsed to its title bar](../assets/img/map/panel_collapsed.png)
+
+### Panel Dock
+
+The dock at the top-left of the map shows or hides each window. A highlighted icon means the window is shown.
+
+![Panel dock](../assets/img/map/panel_dock.png)
+
+A window that does not apply to the current selection has a disabled button; hover it to see why:
+
+![Disabled Connection button with its hint](../assets/img/map/panel_dock_hint.png)
+
+The last button, **Reset panel layout**, restores the default positions, with all windows visible and expanded.
+
+![Reset panel layout button](../assets/img/map/panel_dock_reset.png)
+
+### Resize the Signatures Window
+
+The **Signatures** window can be resized with the grip in its bottom-right corner. It keeps a minimum size and stays inside the map. Long lists scroll inside their window.
+
+![Resize grip of the Signatures window](../assets/img/map/panel_resize_grip.png)
+
+### Last Selection
+
+When you clear the selection (for example by clicking an empty area of the map), the windows keep showing the last selected system or connection, dimmed. The title bar shows the system name, so you always know what is displayed.
+
+![Windows dimmed after the selection is cleared](../assets/img/map/panel_masked.png)
+
+### Saved Layout
+
+Position, size, visibility and collapsed state are saved **per map, in your browser**, and restored on reload. Each pilot can arrange the windows to fit their screen; the layout is not shared with other users or devices.
 
 ## Moving Systems
 

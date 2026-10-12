@@ -2,12 +2,14 @@
 id: system_infos
 title: System Information
 sidebar_position: 3
-description: View system details, wormhole effects, statics, and add personal notes with the System Information panel.
+description: View system details, wormhole effects, statics, and add personal notes with the System and Notes windows.
 ---
 
 ## Overview
 
-This documentation provides details on how to utilize the system information panel effectively. The panel is equipped with shortcuts to third-party websites for additional data, displays crucial details about the selected system, and offers vital properties and effects, especially for wormhole systems.
+This documentation provides details on how to utilize the **System** and **Notes** windows effectively. When you select a system on the map, the System window opens over the map (see [Map Panels](./map.md#map-panels)). It is equipped with shortcuts to third-party websites for additional data, displays crucial details about the selected system, and offers vital properties and effects, especially for wormhole systems.
+
+![System window](../assets/img/info/system_info_module.png)
 
 ![System Info Thirdparty Shortcuts](../assets/img/info/system_info_extra_shortcuts.png)
 
@@ -31,10 +33,10 @@ Security status has a color-coded system for quick recognition:
   ![SS less 0](../assets/img/info/security/NS.png)
   
 - **Orange:** Systems between 0.1 and 0.4
-  ![SS greater than 0 and less 0.5](../assets/img/info/class/LS.png)
+  ![SS greater than 0 and less 0.5](../assets/img/info/security/LS.png)
   
 - **Green:** Systems with SS > 0.5
-  ![SS greater than 0.5](../assets/img/info/class/HS.png)
+  ![SS greater than 0.5](../assets/img/info/security/HS.png)
 
 ### Class System
 
@@ -107,7 +109,7 @@ Hover over the wormhole type to see information about the wormhole's connection 
 
 ### Adding Personal Notes
 
-To enhance your navigation and planning experience, the system information panel allows users to add notes for each system. This feature is particularly useful for keeping track of strategic information, personal observations, or reminders related to specific locations.
+To enhance your navigation and planning experience, the **Notes** window allows users to add notes for each system. This feature is particularly useful for keeping track of strategic information, personal observations, or reminders related to specific locations.
 
 ### How to Use System Notes
 

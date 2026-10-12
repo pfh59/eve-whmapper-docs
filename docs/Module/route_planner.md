@@ -2,12 +2,12 @@
 id: route_planner
 title: Route Planner
 sidebar_position: 5
-description: Learn how to use the Route Planner panel to calculate optimal routes in WHMapper.
+description: Learn how to use the Routes window to calculate optimal routes in WHMapper.
 ---
 
 ## Overview
 
-The **Route Planner** panel helps you calculate optimal travel paths between systems—either through jump gates or mapped wormholes. It includes:
+The **Routes** window helps you calculate optimal travel paths between systems—either through jump gates or mapped wormholes. It includes:
 
 - A **route type selector** (Custom, Thera, Turnur).
 - A **path preference selector** (Safer / Shorter).
@@ -15,7 +15,7 @@ The **Route Planner** panel helps you calculate optimal travel paths between sys
 - A dynamic list of destination systems with jump counts.
 - Automatic pathfinding based on wormhole and gate connections.
 
-If a system is selected and has a valid route (gate or mapped wormhole), the planner automatically calculates the best path based on your preferences.  
+The Routes window opens over the map when a system is selected (see [Map Panels](./map.md#map-panels)). If the selected system has a valid route (gate or mapped wormhole), the planner automatically calculates the best path based on your preferences.  
 By default, the planner uses the **Custom** route type and the **Shorter** path preference.
 
 ![Route Planner Module](../assets/img/route/route_planner_module.png)
@@ -84,7 +84,7 @@ To add a system to your route list:
    Enter at least 3 characters — the list will update in real time.
    :::
 
-4. **Click Add System** to confirm. Systems are added to your list with a jump count of **0** until a map system is selected.
+4. **Click Add System** to confirm. The jump count of each system is calculated from the selected map system.
 
    ![Systems Added (Jita & Amarr)](../assets/img/route/route_planner_systems_empty.png)
 
@@ -147,7 +147,7 @@ Routes can be:
 - Via wormhole (from J165153):  
   ![Route Is Up From WH](../assets/img/route/route_up_from_wh.png)
 
-- Via K-space gates (from Floseswin):  
+- Via K-space gates (from Jita):  
   ![Route Is Up From Kspace](../assets/img/route/route_up_from_kspace.png)
 
 ---

@@ -18,14 +18,14 @@ The **Jump** module tracks all transits through wormhole connections. Every time
 
 ---
 
-## Jump Panel
+## Connection Window
 
-The Jump panel is split into two areas:
+Selecting a connection on the map opens the **Connection** window over the map (see [Map Panels](./map.md#map-panels)). It is split into two areas:
 
 - **Left side**: Summary information about the connection (size, status, first and last jump).
 - **Right side**: Full jump log table showing every recorded transit.
 
-### Summary Panel
+### Summary
 
 | Field | Description |
 |---|---|
@@ -38,8 +38,8 @@ The Jump panel is split into two areas:
 
 | Column | Description |
 |---|---|
-| **Jump Date** | Date of the jump (EVE time) |
-| **Jump Time** | Time of the jump (EVE time) |
+| **Date** | Date of the jump (EVE time) |
+| **Time** | Time of the jump (EVE time) |
 | **Character** | Name of the character who jumped |
 | **Ship** | Ship used for the jump, or *No ship used* if the connection was created manually |
 
@@ -57,11 +57,11 @@ This is the expected behavior: since no actual transit occurred, the tracker can
 
 ## Jump Logging with Ship
 
-When a character **physically jumps** through a wormhole, the module records the event automatically. The ship used at the time of the jump is captured and displayed in both the summary panel and the jump log.
+When a character **physically jumps** through a wormhole, the module records the event automatically. The ship used at the time of the jump is captured and displayed in both the summary and the jump log.
 
 ![Jump - Normal with ship](../assets/img/jump/jump_normal.png)
 
-Multiple jumps through the same connection are all listed in the log table. The **First Jump** and **Last Jump** fields in the summary panel update accordingly.
+Multiple jumps through the same connection are all listed in the log table. The **First Jump** and **Last Jump** fields in the summary update accordingly.
 
 ![Jump - Multiple jumps](../assets/img/jump/jump_multiple.png)
 

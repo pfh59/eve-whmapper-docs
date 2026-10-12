@@ -9,6 +9,8 @@ description: Import, update, and manage wormhole signatures using EVE WHMapper's
 
 The "Signature" section of the EVE Wormhole Mapper documentation provides detailed information on managing and using signatures in the game. Signatures are essential elements for navigating and exploring wormhole space. A signature in EVE Online represents a point of interest in space that players can explore. These signatures can include data sites, relic sites, combat sites, and wormholes. EVE Wormhole Mapper has a dedicated module to manage Signatures in each system.
 
+When you select a system on the map, its signatures are shown in the **Signatures** window over the map. This window can be moved, collapsed and resized (see [Map Panels](./map.md#map-panels)).
+
 ![Signature Module](../assets/img/signature/signature_module.png)
 
 ### Key Features
