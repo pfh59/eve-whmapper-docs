@@ -9,7 +9,17 @@ All notable changes to EVE Wormhole Mapper are listed here. Full details are ava
 
 
 
-## EVE Wormhole Mapper v3.3.2 <span class="badge badge--success">Latest</span>
+## EVE Wormhole Mapper v3.4.0 <span class="badge badge--success">Latest</span>
+*Oct 12, 2026* · Read [**What's new in EVE-WHMAPPER v3.4.0**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.4.0)
+
+- **Statistics module**: a new *Statistics* entry in the account menu shows the Top 10 Probers and Top 10 Explorers over the last 7 days, the last 30 days and all time, filtered by instance and map.
+- **Map panels**: the System, Notes, Signatures, Routes and Connection panels are now windows over the map. You can move, collapse, close and show them again from the dock, and resize the Signatures window. The layout is saved per map in your browser.
+
+:::info Upgrade notes
+A database migration (new `ActivityLogs` table) is applied automatically at startup. Back up your database before upgrading. No configuration change is required. Leaderboards start empty: past activity is not backfilled.
+:::
+
+## EVE Wormhole Mapper v3.3.2
 *Sep 1, 2026* · Read [**What's new in EVE-WHMAPPER v3.3.2**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.3.2)
 
 :::info Drop-in upgrade
