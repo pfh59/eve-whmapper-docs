@@ -77,11 +77,11 @@ This is expected — you need to add at least one map to your instance before th
 
 Access your instances at any time via the user menu:
 
-![User menu with My Instances, Create Instance, Settings, and Logout options](../assets/img/instance/menu.png)
+![User menu with Add Account, My Instances, Create Instance, Statistics, Settings, and Logout options](../assets/img/instance/menu.png)
 
 Click **My Instances** to open the instances panel, which lists every instance you are associated with:
 
-![My Instances panel listing MyInstance with 0 Maps and 1 Admin](../assets/img/instance/my_instances.png)
+![My Instances panel listing MyInstance with 2 Maps and 1 Admin](../assets/img/instance/my_instances.png)
 
 Each entry shows:
 - The instance name and owner character
@@ -97,7 +97,7 @@ To create another instance from this panel, click **+ CREATE NEW INSTANCE**.
 
 Click **MANAGE** on any instance you administer to open the **Instance Administration** panel:
 
-![Instance Administration panel — empty Maps section, Skotounta as Owner admin, and one Access Control entry](../assets/img/instance/instance_admin_empty.png)
+![Instance Administration panel — empty Maps section, Skototounta as Owner admin, and one Access Control entry](../assets/img/instance/instance_admin_empty.png)
 
 The panel has three sections:
 
@@ -127,7 +127,9 @@ Search by character name, corporation name, or alliance name. Select the result 
 
 A confirmation toast appears:
 
-![Success toasts: "Granted access to Les deux mousquetaires" and "You have been granted access to an instance — new maps are now available"](../assets/img/instance/access_granted.png)
+![Success toast: "Granted access to Les deux mousquetaires"](../assets/img/instance/access_granted.png)
+
+Connected pilots who gain access receive a notification that new maps are available.
 
 :::tip
 When access is granted to a corporation or alliance, all members of that entity gain access to the instance. Individual character entries can be used for finer-grained control.
@@ -167,7 +169,7 @@ Type a name for the map. The **CREATE** button becomes active once a name is ent
 
 Click **CREATE**. The map is added to the instance:
 
-![Instance Administration panel — Maps section now shows "My Map" with edit and delete icons](../assets/img/instance/instance_admin_with_map.png)
+![Instance Administration panel — Maps section now shows "My Map" with manage access and delete icons](../assets/img/instance/instance_admin_with_map.png)
 
 You can repeat this process to add as many maps as needed. To add a second map, click **+ ADD** again, enter the new name, and click **CREATE**:
 
@@ -181,7 +183,7 @@ An instance can contain multiple maps. All users with access to the instance can
 
 Each map appears as its own tab in the mapper interface, allowing users to switch between maps without leaving the application:
 
-![Mapper tab bar showing MY MAP and MY MAP2 tabs](../assets/img/instance/map_tabs.png)
+![Mapper tab bar showing MY MAP2 and MY MAP tabs](../assets/img/instance/map_tabs.png)
 
 The **Maps** section of the Instance Administration panel displays the total number of maps and lists each one with its action buttons:
 
