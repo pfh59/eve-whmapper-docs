@@ -5,13 +5,11 @@ sidebar_position: 9
 description: Recognise the pilots carrying the scanning and scouting effort with the Top Probers and Top Explorers leaderboards.
 ---
 
-## Introduction
-
 The **Statistics** module shows who probes and who explores the most on your maps. It helps your corporation recognise the pilots carrying the scanning and scouting effort.
 
 The leaderboards are built from WHMapper's own activity history, stored in its database.
 
-### Key Features
+It shows:
 
 - **Top Probers**: pilots ranked by signatures they scanned down or identified.
 - **Top Explorers**: pilots ranked by systems they opened on a map.
@@ -21,7 +19,7 @@ The leaderboards are built from WHMapper's own activity history, stored in its d
 
 ---
 
-## How to Open Statistics
+## Open Statistics
 
 Open the user menu (`⋮` at the top-right of the screen) and click **Statistics**.
 
@@ -58,7 +56,7 @@ The **TOP PROBERS** tab ranks pilots by the number of signatures they created an
 
 Ties are broken by the number of created signatures.
 
-### What Counts
+### What counts
 
 - **Signature created**: a new signature added by a scan import (paste or Import dialog) from a line at **100% signal strength**.
 - **Signature updated**: an existing signature whose name, group or type changes:
@@ -75,7 +73,7 @@ The **TOP EXPLORERS** tab ranks pilots by the number of systems they opened on a
 
 ![Top Explorers leaderboard](../assets/img/statistics/top_explorers.png)
 
-### What Counts
+### What counts
 
 - **System opened**: each system added to a map where it was not already present, either by automatic location tracking or manually (see [Map → Adding Systems](./map.md#adding-systems)).
 
@@ -95,7 +93,7 @@ Pilot names are resolved from ESI. When a name cannot be resolved, the character
 
 ---
 
-## Good to Know
+## Good to know
 
 :::info Leaderboards start empty
 Activity is recorded from the moment WHMapper v3.4.0 is deployed. Past activity is **not** backfilled, so leaderboards start empty and fill up as your pilots scan and explore.

@@ -2,18 +2,16 @@
 id: settings
 title: Settings
 sidebar_position: 8
-description: Customize keyboard shortcuts, mouse/zoom behavior, and map layout in EVE WHMapper.
+description: Customize keyboard shortcuts, mouse/zoom behavior, and map layout in WHMapper.
 ---
 
-## Introduction
-
-The **Settings** module lets you customize the default behavior of EVE WHMapper for your session. You can configure keyboard shortcuts, mouse and zoom options, and map layout parameters.
+**Settings** lets you adapt WHMapper to the way you play. You can configure keyboard shortcuts, mouse and zoom options, and map layout parameters.
 
 Once saved, these settings are **automatically applied every time your primary character connects** — you never need to reconfigure them between sessions.
 
 ---
 
-## How to Open Settings
+## Open Settings
 
 Open the user menu (`⋮` at the top-right of the screen) and click **Settings**.
 
@@ -23,15 +21,17 @@ The Settings dialog opens with three tabs: **KEYBOARD**, **MOUSE / ZOOM**, and *
 
 ---
 
-## Keyboard Tab
+## Keyboard tab
 
 The **KEYBOARD** tab lets you rebind the default keyboard shortcuts used on the map.
 
 ![Keyboard settings tab](../assets/img/settings/settings_keyboard.png)
 
-> Click on any field and press any key to change its binding.
+:::tip
+Click a field, then press the key you want to use.
+:::
 
-### Default Bindings
+### Default bindings
 
 | Action | Default Key | Description |
 |---|---|---|
@@ -44,7 +44,7 @@ The **KEYBOARD** tab lets you rebind the default keyboard shortcuts used on the 
 
 ---
 
-## Mouse / Zoom Tab
+## Mouse / Zoom tab
 
 The **MOUSE / ZOOM** tab controls mouse interaction and zoom behavior on the map.
 
@@ -61,7 +61,7 @@ The **MOUSE / ZOOM** tab controls mouse interaction and zoom behavior on the map
 
 ---
 
-## Map Tab
+## Map tab
 
 The **MAP** tab controls layout and interaction thresholds for the map canvas.
 
@@ -76,7 +76,7 @@ The **MAP** tab controls layout and interaction thresholds for the map canvas.
 
 ---
 
-## Saving and Resetting
+## Save and reset
 
 | Action | Effect |
 |---|---|

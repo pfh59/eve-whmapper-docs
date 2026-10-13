@@ -1,7 +1,7 @@
 
 # Deploy with Docker & Compose
 
-Deploying the Eve Wormhole Mapper using Docker and Compose is straightforward, especially if you follow these steps for your server and Docker setup.
+The Docker install runs WHMapper, PostgreSQL, Redis and an HTTPS reverse proxy with Docker Compose. An init script asks for your settings and prepares everything.
 
 ## Server
 
@@ -9,16 +9,16 @@ We recommend using a Linux server with the [Debian](https://www.debian.org/index
 
 ## Docker
 
-Before proceeding, ensure Docker is installed on your system. Follow the appropriate instructions for your operating system:
+Install Docker with Compose first:
 
-- [Linux](https://docs.docker.com/desktop/install/linux-install/)
+- [Linux (Docker Engine)](https://docs.docker.com/engine/install/debian/)
 - [Windows](https://docs.docker.com/desktop/install/windows-install/)
 - [OS X](https://docs.docker.com/desktop/install/mac-install/)
 
-### Get Docker-Compose Template
+### Get the Compose files
 
 1. Navigate to your desired installation location.
-2. Clone the Eve-Whmapper repository. It is recommended to install in `/opt/` for Linux or a suitable directory for Windows.
+2. Clone the WHMapper repository (we recommend `/opt/` on Linux).
 
 <details>
 <summary>Linux</summary>
@@ -40,7 +40,7 @@ cd eve-whmapper/deploy/docker
 
 ### Configuration
 
-Configuring Eve-Whmapper is simplified through the initialization script. Run the following script as a sudo or root user on Linux, or as an Administrator on Windows, and follow the on-screen instructions:
+Run the init script (as root on Linux, as Administrator on Windows) and answer its questions:
 
 <details>
 <summary>Linux</summary>
@@ -58,12 +58,12 @@ sudo ./init.sh
 ```
 </details>
 
-This script automatically:
-- Updates all the configurations (docker-compose.yml, haproxy.cfg, nginx.conf) from your response,
-- Initializes all Docker containers,
-- Creates, adds, and uses a strong certificate to use HTTPS with your domain.
+The script:
+- writes your answers into `docker-compose.yml`, `haproxy.cfg` and `nginx.conf`;
+- creates the Docker containers;
+- gets a certificate for your domain, so WHMapper is served over HTTPS.
 
-## Start and Stop
+## Start and stop
 
 To manage the Docker containers, use the provided scripts:
 

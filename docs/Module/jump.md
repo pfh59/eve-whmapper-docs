@@ -2,99 +2,67 @@
 id: jump
 title: Jump
 sidebar_position: 7
-description: Track all transits through wormhole connections — jump logs, statuses, and ship records.
+description: Follow every jump through a wormhole connection — jump log, status, size and ships used.
 ---
 
-## Introduction
+WHMapper records every jump through a connection: who jumped, when, and in which ship. With the connection's status and size, the jump log helps you judge how much mass a wormhole has left before you send more ships through.
 
-The **Jump** module tracks all transits through wormhole connections. Every time a character jumps through a connection, a log entry is recorded with a timestamp and the ship used. The module also displays summary information about the connection's status and its first and last recorded jump.
+## Connection window
 
-### Key Features
+Select a connection on the map to open the **Connection** window (see [Map panels](./map.md#map-panels)).
 
-- **Jump Log**: Each jump is recorded with its date, time, character name, and ship used.
-- **Wormhole Status Tracking**: Displays the current status of the wormhole (Normal, EOL, Reduced, Verge).
-- **First & Last Jump Summary**: Quick overview of when the connection was first used and when it was last used.
-- **No Ship Detection**: When a connection is created manually (without actually jumping), no ship is recorded.
+![Connection window with two jumps](../assets/img/jump/jump_multiple.png)
 
----
-
-## Connection Window
-
-Selecting a connection on the map opens the **Connection** window over the map (see [Map Panels](./map.md#map-panels)). It is split into two areas:
-
-- **Left side**: Summary information about the connection (size, status, first and last jump).
-- **Right side**: Full jump log table showing every recorded transit.
-
-### Summary
+The left side summarizes the connection:
 
 | Field | Description |
 |---|---|
 | **Size** | Size of the wormhole: Small, Medium, Large or XLarge |
-| **Status** | Current wormhole status (see [Wormhole Status](#wormhole-status)) |
-| **First Jump** | Date, time, character, and ship of the first recorded jump |
-| **Last Jump** | Date, time, character, and ship of the most recent jump |
+| **Status** | Current status of the wormhole (see [Wormhole status](#wormhole-status)) |
+| **First Jump** | Date, time, character and ship of the first recorded jump |
+| **Last Jump** | Date, time, character and ship of the most recent jump |
 
-### Jump Log Table
+The right side lists every recorded jump:
 
 | Column | Description |
 |---|---|
 | **Date** | Date of the jump (EVE time) |
 | **Time** | Time of the jump (EVE time) |
-| **Character** | Name of the character who jumped |
-| **Ship** | Ship used for the jump, or *No ship used* if the connection was created manually |
+| **Character** | Character who jumped |
+| **Ship** | Ship used, or *No ship used* if the connection was created manually |
 
----
+## How jumps are recorded
 
-## No Ship Used
+### Tracked jumps
 
-When a connection between two systems is created **manually** (by drawing a link on the map rather than physically jumping through), no ship information is recorded. In this case, the ship field displays **"No ship used"**.
+When a tracked character jumps through a wormhole, WHMapper records the jump with the ship flown at that moment (see [Pilot tracking](./map.md#pilot-tracking)).
 
-![Jump - No ship used](../assets/img/jump/jump_no_ship.png)
+![Connection window with one jump in a Tengu](../assets/img/jump/jump_normal.png)
 
-This is the expected behavior: since no actual transit occurred, the tracker cannot capture a ship.
+Every jump through the same connection is added to the log, and **First Jump** / **Last Jump** are updated (see the two jumps in the first screenshot).
 
----
+### Manual connections
 
-## Jump Logging with Ship
+When you create a connection by hand on the map, no ship is recorded: the log shows **No ship used**.
 
-When a character **physically jumps** through a wormhole, the module records the event automatically. The ship used at the time of the jump is captured and displayed in both the summary and the jump log.
+![Connection window with No ship used](../assets/img/jump/jump_no_ship.png)
 
-![Jump - Normal with ship](../assets/img/jump/jump_normal.png)
+## Wormhole status
 
-Multiple jumps through the same connection are all listed in the log table. The **First Jump** and **Last Jump** fields in the summary update accordingly.
+**Status** shows the mass status of the wormhole. When the wormhole is at end of life, its EOL status is shown next to it. Both are set from the connection menu on the map (see [Editing a connection](./map.md#editing-a-connection)).
 
-![Jump - Multiple jumps](../assets/img/jump/jump_multiple.png)
-
----
-
-## Wormhole Status
-
-The **Status** field reflects the current state of the wormhole and updates in real time. The mass status (Normal, Reduced, Verge) is always shown; an EOL status is shown next to it.
-
-| Status | Color | Description |
+| Status | Colour | Meaning |
 |---|---|---|
-| **Normal** | Green | The wormhole is healthy with no notable changes. |
-| **EOL -4h** | Purple | The wormhole is at End of Life — estimated less than 4 hours remaining. |
-| **EOL -1h** | Purple | The wormhole is at End of Life — estimated less than 1 hour remaining. |
-| **Reduced** | Orange | The wormhole mass has been reduced (a large ship or multiple ships have passed through). |
-| **Verge** | Red | The wormhole is on the verge of collapse — critical mass remaining. |
+| **Normal** | Green | Mass not reduced |
+| **Reduced** | Orange | Mass reduced: a large ship or several ships went through |
+| **Verge** | Red | About to collapse |
+| **EOL -4h** | Purple | End of life, less than about 4 hours left |
+| **EOL -1h** | Purple | End of life, less than about 1 hour left |
 
-### Normal
+Mass status Normal with EOL -4h:
 
-![Status - Normal](../assets/img/jump/jump_normal.png)
+![Status Normal and EOL -4h](../assets/img/jump/jump_eol_4h.png)
 
-### EOL -4h
+Mass status Verge:
 
-![Status - EOL -4h](../assets/img/jump/jump_eol_4h.png)
-
-### EOL -1h
-
-![Status - EOL -1h](../assets/img/jump/jump_eol_1h.png)
-
-### Reduced
-
-![Status - Reduced](../assets/img/jump/jump_reduced.png)
-
-### Verge
-
-![Status - Verge](../assets/img/jump/jump_verge.png)
+![Status Verge](../assets/img/jump/jump_verge.png)

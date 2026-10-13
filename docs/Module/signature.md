@@ -2,136 +2,113 @@
 id: signature
 title: Signature
 sidebar_position: 5
-description: Import, update, and manage wormhole signatures using EVE WHMapper's signature module.
+description: Import, update and manage the cosmic signatures of each system with the WHMapper Signatures window.
 ---
 
-## Introduction
+A signature is a point of interest found with probes: a wormhole, or a data, relic, combat, gas or ore site. WHMapper keeps the signatures of each system and shares them live with every pilot on the map, so you know what has already been scanned.
 
-The "Signature" section of the EVE Wormhole Mapper documentation provides detailed information on managing and using signatures in the game. Signatures are essential elements for navigating and exploring wormhole space. A signature in EVE Online represents a point of interest in space that players can explore. These signatures can include data sites, relic sites, combat sites, and wormholes. EVE Wormhole Mapper has a dedicated module to manage Signatures in each system.
+When you select a system on the map, its signatures are shown in the **Signatures** window. This window can be moved, collapsed and resized (see [Map panels](./map.md#map-panels)).
 
-When you select a system on the map, its signatures are shown in the **Signatures** window over the map. This window can be moved, collapsed and resized (see [Map Panels](./map.md#map-panels)).
+![Signatures window](../assets/img/signature/signature_module.png)
 
-![Signature Module](../assets/img/signature/signature_module.png)
+With the Signatures window you can:
 
-### Key Features
+- paste the in-game scan results to add or update many signatures at once;
+- see who created or last updated each signature, and when;
+- set the wormhole type of a signature, with its destination class;
+- delete expired signatures, one by one or all at once.
 
-- **Share System Signature Information**: Easily share signature data with other players.
-- **Add/Update/Delete Multiple Signatures at Once**: Efficiently manage multiple signatures in a single operation.
-- **Check for New Signatures Within a Second**: Quickly detect new signatures in the system.
-- **Updated Signature Type Information**: Keep signature type information up-to-date.
-- **Live Synchronization Between Clients**: Ensure all clients have the latest signature data in real-time.
+## Import signatures
 
-## How to Import Signatures
+1. In the game, open the **Probe Scanner** and select the signatures to copy (`Ctrl+A`, then `Ctrl+C`).
 
-### Simple Usage
+   ![In-game probe scanner with signatures](../assets/img/signature/sigs_in_game.png)
 
-1. Open the signature panel in the game. By default, all signatures in the system are not probed.
-   
-   ![Sigs in game panel](../assets/img/signature/sigs_in_game.png)
+2. In WHMapper, check that the right system is selected, then click the import button ![Import button](../assets/img/signature/import_sigs_btn.png) in the Signatures window.
 
-2. Use the EVE Wormhole Mapper module to import signatures:
-   - Ensure the selected node is correct in EVE Wormhole Mapper.
-   - Click on the import button: ![import button](../assets/img/signature/import_sigs_btn.png)
-   - Copy and paste the in-game signatures into the import dialogue.
-   - The system validates the signature format using a regular expression for all supported EVE languages, preventing invalid formats.
-   
-   Examples:
-   
-     - **No scanned signatures:**
-     ![import dialogue, no scanned signatures](../assets/img/signature/import_sigs_new.png)
-   
-     - **Partially scanned signatures:**
-     ![import dialogue, partially scanned signatures](../assets/img/signature/import_sigs_new_partial_probing.png)
-   
-   - View the partial import in the signature module:
-   ![Signature module with partial import](../assets/img/signature/signature_module_after_partial_import.png)
+3. Paste the scan into **Scan Result**. WHMapper checks the format for every supported EVE language and shows a preview:
 
-3. The first user to import a signature will be noted with a timer from when the signature was created. This user is the first updater, and all information will be the same. Subsequent users importing the same signature will be noted as updates, and the updated timer will reset at the moment of the update.
+   - nothing probed yet:
 
-:::info
-    Signatures in EVE Online appear and disappear frequently and have an expiration delay. It is very useful to know the expiration delay of wormholes to prevent autocollapse.
-:::
+     ![Import dialog with six unprobed signatures](../assets/img/signature/import_sigs_new.png)
 
-### Advanced Usage With Lazy Delete
+   - some signatures probed:
 
-- **Unchecked (default)**: Imported signatures will be compared with saved signatures:
-  - New signatures appear in **green**.
-  - Updated signatures appear in **grey**.
+     ![Import dialog with two probed signatures](../assets/img/signature/import_sigs_new_partial_probing.png)
 
-- **Checked**: Imported signatures will be compared with saved signatures, and all saved signatures not present in the imported signatures will be deleted.
-  - New signatures appear in **green**.
-  - Updated signatures appear in **grey**.
-  - Deleted signatures appear in **red**.
+4. Click **UPDATE SIGNATURES**. The signatures appear in the Signatures window:
+
+   ![Signatures window after the import](../assets/img/signature/signature_module_after_partial_import.png)
+
+The first pilot to import a signature is its **Creator**. Each later import or edit of the same signature records the **Updater** and resets the **Updated** timer. These timers help you spot old signatures before their wormhole collapses.
+
+### Lazy Deleted
+
+The **Lazy Deleted** option compares your scan with the signatures already saved:
+
+| Colour | Lazy Deleted off (default) | Lazy Deleted on |
+|---|---|---|
+| **Green** | New signature | New signature |
+| **Grey** | Updated signature | Updated signature |
+| **Red** | — | Saved signature missing from your scan: it will be **deleted** |
+
+Starting from the signatures above, a new scan gives:
+
+- Lazy Deleted off:
+
+  ![Import preview without Lazy Deleted](../assets/img/signature/import_sigs_update_no_lazy_deleted.png)
+
+- Lazy Deleted on:
+
+  ![Import preview with Lazy Deleted, two signatures in red](../assets/img/signature/import_sigs_update_with_lazy_deleted.png)
 
 :::tip
-Use this feature to determine updates needed for bookmarks in the game.
+The red rows tell you which bookmarks to remove in the game.
 :::
-
-Example with signatures already imported:
-![Signature module with partial import](../assets/img/signature/signature_module_after_partial_import.png)
-
-- **Lazy Delete Unchecked:**
-  ![Import with no lazy delete](../assets/img/signature/import_sigs_update_no_lazy_deleted.png)
-- **Lazy Delete Checked:**
-  ![Import with lazy delete](../assets/img/signature/import_sigs_update_with_lazy_deleted.png)
-
 
 :::warning
-Avoid using the lazy delete option with a partial selection of signatures to prevent accidental deletions.
+Only turn on Lazy Deleted when you paste **all** the signatures of the system. With a partial selection, the signatures you did not copy are deleted.
 :::
 
-## Update Signature Manually
+## Update signature manually
 
-Probing signatures provides more detailed information. You can update signatures via the import system or manually.
+Imports update signatures automatically. You can also edit a signature by hand, for example to set the type of a wormhole:
 
-:::tip
-It is useful to update wormhole type information.
-:::
+1. Click the row to edit it.
+2. Choose the **Group**:
 
-To update manually:
+   ![Group list](../assets/img/signature/signature_group_list.png)
 
-1. Click on the table row to make it editable.
+3. Set the **Type**:
+   - for a wormhole, choose the wormhole type in the list. Each entry shows the type and its destination class (HS, LS, NS, C1–C6…):
 
-2. Change the group from the list.
-    ![List of groups](../assets/img/signature/signature_group_list.png)
+     ![Wormhole type list](../assets/img/signature/signature_wh_list.png)
 
-3. Change the type of the signature:
-   - If it is not a wormhole, the type of signature is a free text field.
-     
-     ![Update signature type](../assets/img/signature/update_signature2.png)
-   
-   - If the signature is a wormhole, the type of signature is a list of wormholes including names and destination system types (HS/LS/NS/Type of wormhole...).
-     
-     ![List of wormholes](../assets/img/signature/signature_wh_list.png)
-    
-4. Click on the action button to commit or discard your changes : 
-    ![Update signature action buttons](../assets/img/signature/update_signature_action_buttons.png)
+   - for any other group, type free text:
 
-Example of wormhole signature updating:
-![Update signature wormhole](../assets/img/signature/update_signature.png)
+     ![Free text type on a relic site](../assets/img/signature/update_signature2.png)
 
-## Delete a Signature
+4. Click the pencil to save, or the cross to cancel:
 
-If a signature is expired in the game, you can delete it manually:
+   ![Save and cancel buttons](../assets/img/signature/update_signature_action_buttons.png)
 
-1. Click on the delete button at the end of the row: ![Delete icon](../assets/img/signature/delete_sigs_and_sig_btn.png).
+Example: a wormhole set to `D845 -> HS`, about to be saved:
 
-   ![Simple signature row](../assets/img/signature/signature_row.png)
+![Wormhole signature being saved with the Commit button](../assets/img/signature/update_signature.png)
 
-2. A confirmation box is displayed.
-   
-   ![Delete signature confirmation box](../assets/img/signature/delete_sig_dialogbox.png)
+## Delete a signature
 
-Select the signature to delete after confirmation; otherwise, the action is canceled.
+1. Click the trash icon ![Delete button](../assets/img/signature/delete_sigs_and_sig_btn.png) at the end of the row.
 
-## Delete All Signatures
+   ![Signature row with its delete button](../assets/img/signature/signature_row.png)
 
-You can clear all imported signatures:
+2. Click **DELETE** to confirm, or **CANCEL** to keep the signature.
 
-1. Click on the delete icon button ![Delete icon button](../assets/img/signature/delete_sigs_and_sig_btn.png) near ![Import inco button](../assets/img/signature/import_sigs_btn.png)
+   ![Delete signature confirmation](../assets/img/signature/delete_sig_dialogbox.png)
 
-2. A confirmation box appears to approve or not the deletion.
-   
-   ![Delete all signatures confirmation box](../assets/img/signature/delete_all_sigs_dialogbox.png)
+## Delete all signatures
 
-All signatures will be deleted after confirmation; otherwise, the action is canceled.
+1. Click the trash icon ![Delete all button](../assets/img/signature/delete_sigs_and_sig_btn.png) next to the import button ![Import button](../assets/img/signature/import_sigs_btn.png) in the table header.
+2. Click **DELETE** to delete every signature of the system, or **CANCEL** to keep them.
+
+   ![Delete all signatures confirmation](../assets/img/signature/delete_all_sigs_dialogbox.png)

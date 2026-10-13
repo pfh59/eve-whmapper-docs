@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Self-Hosted Installation (Binary)
 
-This guide covers installing Eve Wormhole Mapper directly on Linux Debian or Windows without Docker, using the pre-built binaries published on GitHub Releases.
+This guide covers installing WHMapper directly on Linux Debian or Windows without Docker, using the pre-built binaries published on GitHub Releases.
 
 :::caution Beta — feedback welcome
 This self-hosted (binary) installation method is new and has had limited real-world testing compared to the Docker method. Steps may be incomplete or unclear for some environments (distributions, Windows versions, reverse proxy setups, etc.).
