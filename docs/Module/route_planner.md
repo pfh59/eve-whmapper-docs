@@ -1,7 +1,7 @@
 ---
 id: route_planner
 title: Route Planner
-sidebar_position: 5
+sidebar_position: 6
 description: Learn how to use the Routes window to calculate optimal routes in WHMapper.
 ---
 

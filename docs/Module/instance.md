@@ -1,7 +1,7 @@
 ---
 id: instance
 title: Instance
-sidebar_position: 7
+sidebar_position: 2
 description: Create and manage your isolated WHMapper environment — instances, maps, and access control.
 ---
 

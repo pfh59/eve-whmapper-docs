@@ -1,7 +1,7 @@
 ---
 id: jump
 title: Jump
-sidebar_position: 6
+sidebar_position: 7
 description: Track all transits through wormhole connections — jump logs, statuses, and ship records.
 ---
 
@@ -29,7 +29,7 @@ Selecting a connection on the map opens the **Connection** window over the map (
 
 | Field | Description |
 |---|---|
-| **Size** | Mass category of the wormhole (e.g. Large, Medium, Small, Frigate) |
+| **Size** | Size of the wormhole: Small, Medium, Large or XLarge |
 | **Status** | Current wormhole status (see [Wormhole Status](#wormhole-status)) |
 | **First Jump** | Date, time, character, and ship of the first recorded jump |
 | **Last Jump** | Date, time, character, and ship of the most recent jump |
@@ -69,13 +69,13 @@ Multiple jumps through the same connection are all listed in the log table. The 
 
 ## Wormhole Status
 
-The **Status** field reflects the current state of the wormhole and updates in real time.
+The **Status** field reflects the current state of the wormhole and updates in real time. The mass status (Normal, Reduced, Verge) is always shown; an EOL status is shown next to it.
 
 | Status | Color | Description |
 |---|---|---|
 | **Normal** | Green | The wormhole is healthy with no notable changes. |
-| **EOL -4h** | Red | The wormhole is at End of Life — estimated less than 4 hours remaining. |
-| **EOL -1h** | Red | The wormhole is at End of Life — estimated less than 1 hour remaining. |
+| **EOL -4h** | Purple | The wormhole is at End of Life — estimated less than 4 hours remaining. |
+| **EOL -1h** | Purple | The wormhole is at End of Life — estimated less than 1 hour remaining. |
 | **Reduced** | Orange | The wormhole mass has been reduced (a large ship or multiple ships have passed through). |
 | **Verge** | Red | The wormhole is on the verge of collapse — critical mass remaining. |
 

@@ -189,7 +189,7 @@ sudo systemctl reload nginx
 sudo certbot --nginx -d your.domain.com
 ```
 
-Add these variables to `/etc/whmapper.env` to enforce HTTPS:
+Add this variable to `/etc/whmapper.env` so that WHMapper only listens on localhost, behind nginx:
 
 ```ini
 ASPNETCORE_URLS=http://127.0.0.1:5000
@@ -386,13 +386,10 @@ nssm start nginx
 
 Place your SSL certificates in `C:\nginx\certs\`.
 
-Add to `appsettings.Production.json` to bind only on localhost:
+Make WHMapper listen on localhost only, behind nginx, by setting this system environment variable (PowerShell as Administrator):
 
-```json
-{
-  "http_port": 5000,
-  "https_port": null
-}
+```powershell
+[System.Environment]::SetEnvironmentVariable("ASPNETCORE_URLS", "http://127.0.0.1:5000", "Machine")
 ```
 
 Restart the WHMapper service:
@@ -415,9 +412,9 @@ sc.exe start "WHMapper"
 | `EveSSO.Secret` | `EveSSO__Secret` | *(none)* | CCP SSO Secret |
 | `ConnectionStrings.DatabaseConnection` | `ConnectionStrings__DatabaseConnection` | *(none)* | PostgreSQL connection string |
 | `ConnectionStrings.RedisConnection` | `ConnectionStrings__RedisConnection` | *(none)* | Redis connection string |
-| `http_port` | `http_port` | `80` | HTTP listening port |
-| `https_port` | `https_port` | `443` | HTTPS listening port |
-| `Instances.SingleTenantMode` | `Instances__SingleTenantMode` | `false` | Restrict to a single EVE corporation |
+| — | `ASPNETCORE_URLS` | `http://localhost:5000` | Addresses and ports WHMapper listens on |
+| `https_port` | `https_port` | `443` | Port used when redirecting HTTP requests to HTTPS |
+| `Instances.SingleTenantMode` | `Instances__SingleTenantMode` | `false` | Allow only one instance on the deployment (see [Single-Tenant Mode](../Module/instance.md#single-tenant-mode)) |
 | `DisableSignalRCertificateValidation` | `DisableSignalRCertificateValidation` | `false` | Disable TLS validation for SignalR (local/dev only) |
 | `Serilog.MinimumLevel.Default` | `Serilog__MinimumLevel__Default` | `Warning` | Log level |
 

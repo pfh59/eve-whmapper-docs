@@ -1,7 +1,7 @@
 ---
 id: system_infos
 title: System Information
-sidebar_position: 3
+sidebar_position: 4
 description: View system details, wormhole effects, statics, and add personal notes with the System and Notes windows.
 ---
 

@@ -62,7 +62,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/whmapper.png',
+      image: 'img/logo.png',
       navbar: {
         style: 'dark',
         title: 'EVE-WHMAPPER',

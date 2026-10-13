@@ -1,7 +1,7 @@
 ---
 id: map
 title: Map
-sidebar_position: 2
+sidebar_position: 3
 description: Navigate, track pilots, manage systems and connections with the EVE WHMapper interactive map.
 ---
 
@@ -15,7 +15,7 @@ The map in EVE WHMapper is a vital navigational tool for EVE Online players, off
   - The map provides a detailed overview of connections between systems, aiding in efficient route planning and identifying new strategic opportunities.
 
 - **Universal Accessibility:**
-  - Available to all users, the map ensures accessibility while implementing robust access controls via the Admin Module to manage permissions effectively.
+  - Available to all users, the map ensures accessibility while implementing robust access controls managed per instance and per map (see [Instance](./instance.md)).
 
 - **Focused Content:**
   - To maintain clarity and relevance, the map includes only systems and wormhole connections, whether through stargates or natural wormholes.
@@ -79,11 +79,9 @@ The automatic tagging feature assigns sequential letters (A, B, C, etc.) to targ
 
 ### Manual Adjustment
 
-Tags can be manually adjusted by using the following keys:
-- `+` : Increment tag
-- `-` : Decrement tag
-- `Up` : Move tag up
-- `Down` : Move tag down
+Select a system, then use the following keys to change its tag (default bindings, see [Settings → Keyboard](./settings.md#keyboard-tab)):
+- `Numpad +` or `Arrow Up`: next letter (e.g. A → B)
+- `Numpad -` or `Arrow Down`: previous letter (e.g. B → A)
 
 ### Bookmarks example in game
 
@@ -137,8 +135,8 @@ Selecting connections between systems is crucial for managing navigation routes 
 The map interface supports selecting multiple systems simultaneously, facilitating efficient bulk operations and navigation.
 
 - **Multiple System Selection:**
-  - You can select multiple systems by holding down the `Shift` key and using a left-click.
-  - As you drag, a highlighted selection area will appear, enabling you to envelop and select several systems at once.
+  - `Ctrl` + left-click adds a system to the selection, or removes it if it is already selected (can be disabled in [Settings → Mouse / Zoom](./settings.md#mouse--zoom-tab)).
+  - `Shift` + left-click and drag draws a selection area: every system inside it is selected.
   
   ![Multi select](../assets/img/map/multi_select.png)
 
@@ -205,8 +203,8 @@ The map interface allows for flexible organization, letting you move systems ind
   - The system will follow your cursor's path, and its new position will be set upon release of the mouse button.
 
 - **Multiple System Movement:**
-  - Use the multi-select feature by holding down the `Shift` key and left-clicking to create a selection area around multiple systems.
-  - Once selected, click and drag any one of the highlighted systems to move the entire group.
+  - Select several systems (see [Selecting Multiple Systems](#selecting-multiple-systems)).
+  - Click and drag any one of the highlighted systems to move the entire group.
 
 ## Adding Systems
 
@@ -356,8 +354,7 @@ By utilizing these options, players can keep track of the status and characteris
 ## Deleting Systems
 
 1. **Select Systems:**
-   - Navigate to the map or list view where your systems are displayed.
-   - Click to highlight the systems you wish to delete. You can select multiple systems by holding down the `Ctrl` key while clicking on each system.
+   - Click a system to select it, or select several systems (see [Selecting Multiple Systems](#selecting-multiple-systems)).
 
 2. **Delete Selected Systems:**
    - Once you have selected the systems, simply press the `Del` (Delete) key on your keyboard.

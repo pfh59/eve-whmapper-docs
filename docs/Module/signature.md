@@ -1,7 +1,7 @@
 ---
 id: signature
 title: Signature
-sidebar_position: 4
+sidebar_position: 5
 description: Import, update, and manage wormhole signatures using EVE WHMapper's signature module.
 ---
 
