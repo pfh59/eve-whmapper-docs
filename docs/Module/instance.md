@@ -1,7 +1,7 @@
 ---
 id: instance
 title: Instance
-sidebar_position: 7
+sidebar_position: 2
 description: Create and manage your isolated WHMapper environment — instances, maps, and access control.
 ---
 
@@ -11,7 +11,7 @@ An **instance** is your isolated WHMapper environment. It groups maps, administr
 
 ---
 
-## No Access
+## No access
 
 When you log in for the first time and your character, corporation, or alliance has not yet been granted access to any instance, WHMapper shows the following screen:
 
@@ -24,7 +24,7 @@ From here you can either:
 
 ---
 
-## Creating an Instance
+## Create an instance
 
 Click **CREATE AN INSTANCE** to open the registration dialog.
 
@@ -38,7 +38,7 @@ Fill in the fields:
 | **Description** | No | An optional description of the instance. |
 | **Instance Access Type** | Yes | Defines who owns the instance — see below. |
 
-### Instance Access Type
+### Instance access type
 
 The access type determines the owner entity of the instance. The dropdown lists all entities linked to your authenticated character:
 
@@ -63,13 +63,13 @@ Once the form is valid, click **CREATE INSTANCE**. You become the administrator 
 
 ---
 
-## After Creation — No Map Available
+## After creation: no map yet
 
 Immediately after creating an instance, WHMapper has no map to display yet. You will see:
 
 ![Mapper showing "No map available" without error](../assets/img/instance/no_map.png)
 
-This is expected — you need to add at least one map to your instance before the mapper becomes usable. See [Adding a Map](#adding-a-map) below.
+This is expected — you need to add at least one map to your instance before the mapper becomes usable. See [Add a map](#add-a-map) below.
 
 ---
 
@@ -79,9 +79,9 @@ Access your instances at any time via the user menu:
 
 ![User menu with Add Account, My Instances, Create Instance, Statistics, Settings, and Logout options](../assets/img/instance/menu.png)
 
-Click **My Instances** to open the instances panel, which lists every instance you are associated with:
+Click **My Instances** to open the **My Instances** dialog. It lists every instance you belong to:
 
-![My Instances panel listing MyInstance with 2 Maps and 1 Admin](../assets/img/instance/my_instances.png)
+![My Instances dialog listing MyInstance with 2 Maps and 1 Admin](../assets/img/instance/my_instances.png)
 
 Each entry shows:
 - The instance name and owner character
@@ -89,17 +89,17 @@ Each entry shows:
 - The number of maps and administrators
 - A **MANAGE** link (visible only to administrators)
 
-To create another instance from this panel, click **+ CREATE NEW INSTANCE**.
+To create another instance from this dialog, click **+ CREATE NEW INSTANCE**.
 
 ---
 
 ## Instance Administration
 
-Click **MANAGE** on any instance you administer to open the **Instance Administration** panel:
+Click **MANAGE** on any instance you administer to open the **Instance Administration** dialog:
 
-![Instance Administration panel — empty Maps section, Skototounta as Owner admin, and one Access Control entry](../assets/img/instance/instance_admin_empty.png)
+![Instance Administration dialog — empty Maps section, Skototounta as Owner admin, and one Access Control entry](../assets/img/instance/instance_admin_empty.png)
 
-The panel has three sections:
+The dialog has three sections:
 
 | Section | Description |
 |---|---|
@@ -110,12 +110,12 @@ The panel has three sections:
 At the top you can **EDIT** the instance name/description or **DELETE** the instance entirely.
 
 :::warning
-Only administrators of an instance can see the **MANAGE** option and access this panel.
+Only administrators of an instance can see the **MANAGE** option and open this dialog.
 :::
 
 ---
 
-## Managing Instance Access
+## Instance access
 
 The **Access Control** section defines who can access the instance. By default, only the creator's character is listed.
 
@@ -139,7 +139,7 @@ To revoke access, click the delete icon on the corresponding row.
 
 ---
 
-## Adding Administrators
+## Administrators
 
 In the **Admins** section, click **+ ADD** to promote another character to administrator. Administrators can manage maps, access control, and instance settings.
 
@@ -147,9 +147,9 @@ The creator of the instance always appears as **Owner** and cannot be removed fr
 
 ---
 
-## Editing an Instance
+## Edit an instance
 
-Click **EDIT** in the Instance Administration panel to modify the instance name or description:
+Click **EDIT** in the Instance Administration dialog to modify the instance name or description:
 
 ![Edit Instance dialog with Name and Description fields](../assets/img/instance/edit_instance.png)
 
@@ -157,7 +157,7 @@ Click **SAVE** to apply the changes or **CANCEL** to discard them.
 
 ---
 
-## Adding a Map
+## Add a map
 
 In the **Maps** section, click **+ ADD**. The *Add Map* dialog appears:
 
@@ -169,7 +169,7 @@ Type a name for the map. The **CREATE** button becomes active once a name is ent
 
 Click **CREATE**. The map is added to the instance:
 
-![Instance Administration panel — Maps section now shows "My Map" with manage access and delete icons](../assets/img/instance/instance_admin_with_map.png)
+![Instance Administration dialog — Maps section now shows "My Map" with manage access and delete icons](../assets/img/instance/instance_admin_with_map.png)
 
 You can repeat this process to add as many maps as needed. To add a second map, click **+ ADD** again, enter the new name, and click **CREATE**:
 
@@ -177,7 +177,7 @@ You can repeat this process to add as many maps as needed. To add a second map, 
 
 ---
 
-## Multi-Map Management
+## Several maps
 
 An instance can contain multiple maps. All users with access to the instance can view all maps by default.
 
@@ -185,14 +185,14 @@ Each map appears as its own tab in the mapper interface, allowing users to switc
 
 ![Mapper tab bar showing MY MAP2 and MY MAP tabs](../assets/img/instance/map_tabs.png)
 
-The **Maps** section of the Instance Administration panel displays the total number of maps and lists each one with its action buttons:
+The **Maps** section of the Instance Administration dialog displays the total number of maps and lists each one with its action buttons:
 
 ![Maps section showing Maps (2) — My Map and My MAP2 with padlock badge](../assets/img/instance/maps_list_multiple.png)
 
 A padlock badge on a map entry indicates that access restrictions have been applied to that map (the number shows how many access entries are configured).
 
-:::warning Tracker only works on the active map
-The **tracking system** (automatic chain update, signature sync) operates exclusively on the **active map** — the tab currently selected in the mapper. Switching to a different tab changes which map receives live updates. Make sure all scouts and mappers are on the same active map.
+:::warning Tracking only updates the active map
+[Pilot tracking](./map.md#pilot-tracking) adds systems and connections only to the **active map** — the tab currently selected in the mapper. Make sure all scouts use the same map tab.
 :::
 
 ---
@@ -201,9 +201,9 @@ The **tracking system** (automatic chain update, signature sync) operates exclus
 
 Each map can have its own access restrictions, independent of the instance-level access control. By default, every user with access to the instance can view every map.
 
-### Map Action Buttons
+### Map buttons
 
-In the **Maps** section of the Instance Administration panel, each map row shows two icons on the right:
+In the **Maps** section of the Instance Administration dialog, each map row shows two icons on the right:
 
 ![Map row showing the blue shield (Manage Access) and red trash (Delete Map) icons](../assets/img/instance/map_row_icons.png)
 
@@ -216,7 +216,7 @@ Hovering over each icon shows its tooltip:
 
 ![Map row with blue shield icon hovered — Manage Access tooltip visible](../assets/img/instance/map_manage_access_tooltip.png)
 
-### Default State — No Restrictions
+### No restrictions
 
 When no access entries have been added, the dialog shows a blue **No restrictions** banner:
 
@@ -226,7 +226,7 @@ When no access entries have been added, the dialog shows a blue **No restriction
 
 The lower section lists all entities that currently have instance-level access. Click **+ ADD** next to any entry to restrict the map to that entity.
 
-### Restricted State
+### Restricted access
 
 Once at least one access entry is added, the dialog switches to a yellow **Restricted access** banner:
 
@@ -248,23 +248,23 @@ Regardless of per-map restrictions, **instance administrators** always retain ac
 
 ---
 
-## Single-Tenant Mode
+## Single-tenant mode
 
 By default, WHMapper allows multiple instances to be created by any user. **Single-Tenant Mode** restricts this so that only one instance can exist across the entire deployment — once an instance is created, the **CREATE AN INSTANCE** option is locked for all other users.
 
 This is intended for self-hosted deployments where a single corporation or alliance owns the server and should be the sole instance owner.
 
-To enable single-tenant mode, add the following environment variable to your Docker configuration:
+To enable single-tenant mode, set the following environment variable (Docker `docker-compose.yml`, or `/etc/whmapper.env` for the binary install):
 
 ```env
 Instances__SingleTenantMode=True
 ```
 
-When this mode is active and an instance already exists, users who do not have access to that instance will see the standard [No Access](#no-access) screen without the option to create a new instance.
+When this mode is active and an instance already exists, users who do not have access to that instance will see the standard [No access](#no-access) screen without the option to create a new instance.
 
 ---
 
-## Multi-Instance Access
+## Access to several instances
 
 A user can belong to multiple instances simultaneously — either as a direct member, through their corporation, or through their alliance. In that case, WHMapper aggregates all maps from all accessible instances and displays them as tabs in a single view.
 

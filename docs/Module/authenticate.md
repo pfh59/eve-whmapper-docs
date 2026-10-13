@@ -5,11 +5,11 @@ sidebar_position: 1
 description: How to log in to EVE Wormhole Mapper using CCP's Single Sign-On (SSO).
 ---
 
-EVE Wormhole Mapper authenticates using your EVE Online account via CCP's Single Sign-On (SSO). Your password is never stored — only a secure CCP-issued token is used.
+WHMapper uses your EVE Online account through CCP's Single Sign-On (SSO). Your password is never sent to WHMapper — only a token issued by CCP is stored.
 
-## Login Flow
+## Login flow
 
-1. **Open Account Settings** — click the **ACCOUNT** button on the main interface.
+1. **Open the account menu** — click **Account** at the top-right of the home page.
 
    ![Main interface showing the ACCOUNT button](../assets/img/authenticate/account_btn.png)
 
@@ -29,9 +29,9 @@ EVE Wormhole Mapper authenticates using your EVE Online account via CCP's Single
 
    ![CCP scope authorization screen](../assets/img/authenticate/ccp_authorization.png)
 
-## After Login
+## After login
 
-Once CCP authentication succeeds, WHMapper checks your instance membership:
+Once CCP has authenticated you, WHMapper checks which instances you can access:
 
 - **You belong to an instance** — the first accessible map loads automatically.
 
@@ -41,7 +41,7 @@ Once CCP authentication succeeds, WHMapper checks your instance membership:
 
   Refer to the **[Instance](./instance.md)** page for the full walkthrough.
 
-## Multiple Characters
+## Multiple characters
 
 You can link several EVE characters to the same session using the **Add Account** button.
 

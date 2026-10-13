@@ -5,15 +5,16 @@ sidebar_position: 2
 description: How to initialize and launch EVE Wormhole Mapper for the first time.
 ---
 
-Setting up EVE Wormhole Mapper for the first time involves a few essential steps to create the database and initialize the necessary components.
+On first start, EVE Wormhole Mapper prepares its database and the EVE static data it needs. Both steps are automatic — no action is required.
 
 ## Initialization
 
 :::info
-On first launch, EVE Wormhole Mapper automatically initializes the database. This process is fully automated — no action is required.
+- **Database**: the PostgreSQL schema is created, or migrated to the new version, every time the application starts.
+- **Static data (SDE)**: the first time the home page is opened, WHMapper downloads and installs the EVE Static Data Export (SDE). This happens again only if the SDE is missing, for example after its files were removed.
 :::
 
-The following steps are performed during initialization:
+The SDE installation shows the following steps:
 
 ![Initialization starting — step 1/4: removing outdated SDE package](../assets/img/init_0.png)
 

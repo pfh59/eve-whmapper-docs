@@ -8,8 +8,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Eve Wormhole Mapper',
-  tagline: 'documentation for the eve wormhole mapper tool',
+  title: 'EVE Wormhole Mapper',
+  tagline: 'Map wormhole chains, track your pilots and share them live with your corporation.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -26,20 +26,18 @@ const config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  
+  onBrokenAnchors: 'throw',
+
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: 'warn',
+      onBrokenMarkdownLinks: 'throw',
     },
   },
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  /*i18n: {
+  i18n: {
     defaultLocale: 'en',
     locales: ['en'],
-  },*/
+  },
 
   presets: [
     [
@@ -50,6 +48,8 @@ const config = {
           path: 'docs',
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/pfh59/eve-whmapper-docs/edit/main/',
+          showLastUpdateTime: true,
         },
         blog: false,
         theme: {
@@ -59,23 +59,33 @@ const config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        docsRouteBasePath: '/',
+        indexBlog: false,
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/whmapper.png',
+      image: 'img/logo.png',
       navbar: {
         style: 'dark',
-        title: 'EVE-WHMAPPER',
+        title: 'EVE Wormhole Mapper',
         logo: {
           alt: 'EVE Wormhole Mapper Logo',
           src: 'img/logo.png',
         },
         items: [
           { to: '/home', label: 'Home', position: 'left' },
-          /*{
-            type: 'localeDropdown',
-            position: 'right',
-          },*/
+          { to: '/GettingStarted/installation', label: 'Installation', position: 'left' },
+          { to: '/Notes/updates', label: 'Release Notes', position: 'left' },
+          { href: 'https://github.com/pfh59/eve-whmapper', label: 'GitHub', position: 'right' },
         ],
       },
       footer: {
@@ -116,7 +126,7 @@ const config = {
       },
       colorMode: {
         disableSwitch: true,
-        defaultMode: 'dark', // ou 'dark' selon votre préférence
+        defaultMode: 'dark',
       },
     }),
 };

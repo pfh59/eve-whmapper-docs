@@ -7,6 +7,11 @@ description: Discover EVE Wormhole Mapper — a real-time wormhole mapping tool 
 
 ## Welcome to EVE Wormhole Mapper
 
-EVE Wormhole Mapper (EVE WHMapper) is a comprehensive tool designed for the explorers and residents of wormholes in the EVE Online universe. It provides an intuitive interface for mapping and tracking the complex networks of wormholes in real-time, ensuring that you can navigate the vastness of space with ease and confidence.
+EVE Wormhole Mapper (WHMapper) maps wormhole chains for EVE Online pilots and corporations. It tracks where your characters go, draws the chain as you jump, and shares it live with everyone on the map — along with signatures, system information, routes and jump history.
 
-Whether you're a solo pilot or part of a corporation, EVE WHMapper supports real-time updates, detailed system information, and collaboration tools for team operations.
+## Where to start
+
+- **Install your own server**: [Installation](./GettingStarted/installation.md), then [First Start](./GettingStarted/first_start.md).
+- **Log in and set up your corporation**: [Authenticate](./Module/authenticate.md), then [Instance](./Module/instance.md).
+- **Use the map**: [Map](./Module/map.md), [Signature](./Module/signature.md), [Route Planner](./Module/route_planner.md).
+- **What's new**: [Release Notes](./Notes/updates.md).

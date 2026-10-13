@@ -1,370 +1,281 @@
 ---
 id: map
 title: Map
-sidebar_position: 2
-description: Navigate, track pilots, manage systems and connections with the EVE WHMapper interactive map.
+sidebar_position: 3
+description: Navigate, track pilots, manage systems and connections with the WHMapper interactive map.
 ---
 
-## Introduction
+The map shows your wormhole chain: the systems you have found and the connections between them, through wormholes or stargates. Every change is synchronized live, so all pilots on the same map see the same chain at the same time.
 
-The map in EVE WHMapper is a vital navigational tool for EVE Online players, offering comprehensive insights into the intricate web of wormhole space. It is designed to enhance your abilities for strategic planning and spontaneous exploration.
+From the map you can:
 
-### Key Features
+- track where your characters are and let WHMapper add the systems they enter;
+- add, move, lock, tag and delete systems;
+- set the status, size and end of life of each connection;
+- open the System, Notes, Signatures, Routes and Connection windows for the selected item.
 
-- **Inter-System Connections:**
-  - The map provides a detailed overview of connections between systems, aiding in efficient route planning and identifying new strategic opportunities.
+Who can open a map is set per instance and per map (see [Instance](./instance.md)).
 
-- **Universal Accessibility:**
-  - Available to all users, the map ensures accessibility while implementing robust access controls via the Admin Module to manage permissions effectively.
+## Connected users
 
-- **Focused Content:**
-  - To maintain clarity and relevance, the map includes only systems and wormhole connections, whether through stargates or natural wormholes.
-
-- **Live Synchronization Between Clients:**
-  - A crucial feature, live synchronization ensures that all users accessing the map see consistent, up-to-date information in real-time.
-  - **Enhanced Coordination:**
-    - Enables immediate sharing of map changes and updates, fostering efficient teamwork and strategic implementation.
-  - **Unified Gameplay Experience:**
-    - Ensures that all players see the same map alterations, minimizing potential for miscommunication or errors and promoting a seamless gaming experience.
-
-Live synchronization and other map features will significantly boost your efficiency in navigating wormhole space, thereby enriching your overall EVE Online experience. This tool is designed to not only support strategic planning but also cater to impromptu exploration endeavors.
-
-## Real-Time Connection Statistics
-
-The active map displays live connection statistics and a dynamic user count directly on the map interface. This gives all connected pilots an at-a-glance view of how many users are currently active on the map, updating in real time as pilots join or switch tabs.
+The top bar shows how many pilots are currently on the **active map tab**. The count updates live as pilots join, leave or switch tabs.
 
 :::tip
-The user count reflects activity on the **currently active map tab**. Switching to a different map tab updates the count for that map. Make sure your fleet is on the same active map to see accurate numbers.
+The count only covers the active tab. Make sure your fleet uses the same map tab to get an accurate number.
 :::
 
-## Pilot Tracking
+## Pilot tracking
 
-Pilot tracking provides a dynamic solution for real-time location monitoring of team members, significantly boosting coordination and safety within your operations. This feature seamlessly integrates with the map, delivering the following benefits:
+When tracking is on, WHMapper follows each of your characters through ESI:
 
-- **Automatic Updates**: The map position is refreshed automatically, removing the need for manual input and ensuring you have the most current locations at all times.
-- **Auto-detection of Connections**: System connections between pilots are auto-detected, allowing you to concentrate on exploration without distraction.
-- **Enhanced Coordination**: By knowing the real-time locations of your team members, you can better coordinate movements and strategies, optimizing mission outcomes.
+- the system a character enters is added to the active map;
+- the connection between the previous and the new system is created automatically;
+- the character's name appears on the system it is in.
 
-This system's ability to maintain real-time awareness supports efficient navigation and discovery in EVE Online's vast and complex wormhole space.
+After you log in, tracking is on for every character. A green dot on a character badge means tracking is on:
 
-By default, all characters have tracking enabled after authentication (indicated by a green dot on each character badge):
+![Two character badges with a green tracking dot](../assets/img/map/all_tracking_enable.png)
 
-![All Tracking Enabled](../assets/img/map/all_tracking_enable.png)
+### Turn tracking on or off
 
----
+Right-click a character badge in the top bar:
 
-### Enable or Disable Tracking
+- **UnTrack** turns tracking off for that character (red dot):
 
-You can enable or disable tracking individually for each logged-in character.
+  ![Badge menu with UnTrack](../assets/img/map/disable_tracking.png)
 
-To do so, right-click on the character’s badge:
+- **Track** turns it back on (green dot):
 
-- **Untrack** to disable tracking (a red dot will appear on the badge):  
-  ![Disable Tracking](../assets/img/map/disable_tracking.png)
+  ![Badge menu with Track](../assets/img/map/enable_tracking.png)
 
-- **Track** to enable tracking (a green dot will appear on the badge):  
-  ![Enable Tracking](../assets/img/map/enable_tracking.png)
+Tracking only works on maps the character can open. When a character has no access to the active map, its badge shows a red dot and the menu shows **No Map Access**:
 
-Tracking only applies to maps the character can open. When a character has no access to the active map, its badge shows a red dot and the menu displays **No Map Access** instead of Track/UnTrack:
+![Badge menu showing No Map Access](../assets/img/map/tracking_no_map_access.png)
 
-![No Map Access - tracking disabled for this character on the active map](../assets/img/map/tracking_no_map_access.png)
+### Automatic tags
 
+When several systems of the same class are connected to the same origin, WHMapper gives them sequential letters (A, B, C…). Use these letters to name your in-game bookmarks.
 
+![Two low-security exits tagged A and B from the same wormhole](../assets/img/map/autotag.png)
 
-### Automatic Tagging of Target Systems
+To change a tag, select the system and press (default bindings, see [Settings → Keyboard](./settings.md#keyboard-tab)):
 
-The automatic tagging feature assigns sequential letters (A, B, C, etc.) to target systems of the same class originating from the same system. This functionality simplifies navigation and bookmark management within the game.
+- `Numpad +` or `Arrow Up`: next letter (A → B);
+- `Numpad -` or `Arrow Down`: previous letter (B → A).
 
-![Autotag](../assets/img/map/autotag.png)
+Bookmark examples:
 
-### Manual Adjustment
+| Bookmark | Meaning |
+|---|---|
+| `>> LS - EJC` | Low-security exit |
+| `>> LSB - KWE` | Second low-security exit from the same origin |
+| `>> HS - MCE` | High-security exit |
 
-Tags can be manually adjusted by using the following keys:
-- `+` : Increment tag
-- `-` : Decrement tag
-- `Up` : Move tag up
-- `Down` : Move tag down
+## Selection
 
-### Bookmarks example in game
+A selected system or connection is highlighted, and the windows for it open over the map (see [Map panels](#map-panels)).
 
-Here are examples of how the tags appear, aiding easy navigation:
-- **">> LS - EJC"**: Represents a low-security system tag.
-- **">> LSB - KWE"**: An example of subsequent tagging from the same origin.
-- **">> HS - MCE"**: Represents a high-security system tag.
+### Select a system
 
-By automating and customizing system tagging, you enhance your operational efficiency and map readability within the game environment.
+Left-click a system.
 
-## Selection Methods in the Map Interface
-
-The map interface provides intuitive methods for selecting systems and connections, enhancing user interaction and navigation. When you select an element, it is highlighted, indicating activation and enabling specific features.
-
-### Selecting System
-
-Selecting systems within the map interface allows you to engage with various modules that enhance system management and navigation.
-
-- Systems can be selected individually with a left-click.
-- The selected system will be highlighted.
-  
 ![Selected system](../assets/img/map/selected_system.png)
 
-- **Windows Displayed:**
-  - Selecting a system shows the following windows over the map (see [Map Panels](#map-panels)):
-    - **System** and **Notes** — **[System Information](../Module/system_infos.md)**
-    - **Signatures** — **[Signature Module](../Module/signature.md)**
-    - **Routes** — **[Route Planner Module](../Module/route_planner.md)**
+These windows open:
 
-  - These windows provide detailed information and tools for efficient navigation.
-  
-  ![System, Notes, Signatures and Routes windows over the map](../assets/img/map/info_signature_routeplanner.png)
+- **System** and **Notes** — see [System Information](./system_infos.md);
+- **Signatures** — see [Signature](./signature.md);
+- **Routes** — see [Route Planner](./route_planner.md).
 
-### Selecting a Connection
+![System, Notes, Signatures and Routes windows over the map](../assets/img/map/info_signature_routeplanner.png)
 
-Selecting connections between systems is crucial for managing navigation routes and system interactions.
+### Select a connection
 
-- Connections can also be selected individually with a left-click.
-- The selected connection will appear highlighted.
-   
-![Selected link](../assets/img/map/selected_link.png)
+Left-click a connection.
 
-- **Window Displayed:**
-  - Selecting a connection shows the **Connection** window of the **[Jump Module](../Module/jump.md)** instead of the system windows.
-  - It shows the connection's size, status and jump log.
-  
-  ![Connection window](../assets/img/map/jump_module.png)
+![Selected connection between two systems](../assets/img/map/selected_link.png)
 
-### Selecting Multiple Systems
+The **Connection** window replaces the system windows. It shows the connection's size, status and jump log (see [Jump](./jump.md)).
 
-The map interface supports selecting multiple systems simultaneously, facilitating efficient bulk operations and navigation.
+![Connection window](../assets/img/map/jump_module.png)
 
-- **Multiple System Selection:**
-  - You can select multiple systems by holding down the `Shift` key and using a left-click.
-  - As you drag, a highlighted selection area will appear, enabling you to envelop and select several systems at once.
-  
-  ![Multi select](../assets/img/map/multi_select.png)
+### Selecting multiple systems
 
-  - Once selected, the systems within the highlighted area will be individually highlighted to indicate inclusion in the selection.
+- `Ctrl` + left-click adds a system to the selection, or removes it if it is already selected. This can be turned off in [Settings → Mouse / Zoom](./settings.md#mouse--zoom-tab).
+- `Shift` + left-click and drag draws a selection area. Every system inside it is selected:
 
-  ![Selected systems](../assets/img/map/selected_systems.png)
+  ![Selection area drawn with Shift + drag](../assets/img/map/multi_select.png)
 
-## Map Panels
+  ![Four systems selected](../assets/img/map/selected_systems.png)
 
-The **System**, **Notes**, **Signatures**, **Routes** and **Connection** panels are floating windows displayed over the map. The map stays fully usable around them: clicks, right-clicks and zoom outside a window reach the map.
+## Map panels
 
-- **System**, **Notes**, **Signatures** and **Routes** follow the selected system. Default placement: System and Notes top-right, Signatures bottom-left, Routes bottom-right.
+The **System**, **Notes**, **Signatures**, **Routes** and **Connection** windows float over the map. The map stays usable around them: clicks, right-clicks and zoom outside a window reach the map.
+
+- **System**, **Notes**, **Signatures** and **Routes** follow the selected system. By default, System and Notes are top-right, Signatures bottom-left and Routes bottom-right.
 - **Connection** follows the selected connection and replaces the system windows while a connection is selected.
 
-### Move a Window
+### Move a window
 
 Drag a window by its **title bar**. The window comes to the front when you press or move it, and always stays inside the map.
 
-### Collapse and Close
+### Collapse and close
 
 Each title bar has two buttons:
 
-- **Collapse arrow** — reduces the window to its title bar, or expands it again.
-- **Close** (`×`) — hides the window.
+- the **collapse arrow** reduces the window to its title bar, or expands it again;
+- **Close** (`×`) hides the window.
 
 ![System window collapsed to its title bar](../assets/img/map/panel_collapsed.png)
 
-### Panel Dock
+### Panel dock
 
 The dock at the top-left of the map shows or hides each window. A highlighted icon means the window is shown.
 
 ![Panel dock](../assets/img/map/panel_dock.png)
 
-A window that does not apply to the current selection has a disabled button; hover it to see why:
+A window that does not apply to the current selection has a disabled button. Hover it to see why:
 
 ![Disabled Connection button with its hint](../assets/img/map/panel_dock_hint.png)
 
-The last button, **Reset panel layout**, restores the default positions, with all windows visible and expanded.
+The last button, **Reset panel layout**, puts every window back in its default place, visible and expanded.
 
 ![Reset panel layout button](../assets/img/map/panel_dock_reset.png)
 
-### Resize the Signatures Window
+### Resize the Signatures window
 
-The **Signatures** window can be resized with the grip in its bottom-right corner. It keeps a minimum size and stays inside the map. Long lists scroll inside their window.
+Drag the grip in the bottom-right corner of the **Signatures** window to resize it. It keeps a minimum size and stays inside the map. Long lists scroll inside their window.
 
 ![Resize grip of the Signatures window](../assets/img/map/panel_resize_grip.png)
 
-### Last Selection
+### Last selection
 
-When you clear the selection (for example by clicking an empty area of the map), the windows keep showing the last selected system or connection, dimmed. The title bar shows the system name, so you always know what is displayed.
+When you clear the selection, for example by clicking an empty area of the map, the windows keep showing the last selected system or connection, dimmed. The title bar shows the system name, so you always know what is displayed.
 
 ![Windows dimmed after the selection is cleared](../assets/img/map/panel_masked.png)
 
-### Saved Layout
+### Saved layout
 
-Position, size, visibility and collapsed state are saved **per map, in your browser**, and restored on reload. Each pilot can arrange the windows to fit their screen; the layout is not shared with other users or devices.
+Position, size, visibility and collapsed state are saved **per map, in your browser**, and restored when you reload the page. Each pilot can arrange the windows to fit their screen; the layout is not shared with other users or devices.
 
-## Moving Systems
+## Moving systems
 
-The map interface allows for flexible organization, letting you move systems individually or in groups to suit your preferences and workflow needs.
+- **One system**: drag it to its new position.
+- **Several systems**: select them (see [Selecting multiple systems](#selecting-multiple-systems)), then drag any of them to move the whole group.
 
-- **Individual System Movement:**
-  - Click and drag a system to move it to a new position on the map.
-  - The system will follow your cursor's path, and its new position will be set upon release of the mouse button.
+Locked systems cannot be moved (see [Lock a system](#lock-a-system)).
 
-- **Multiple System Movement:**
-  - Use the multi-select feature by holding down the `Shift` key and left-clicking to create a selection area around multiple systems.
-  - Once selected, click and drag any one of the highlighted systems to move the entire group.
+## Adding systems
 
-## Adding Systems
+Systems are added automatically by [pilot tracking](#pilot-tracking). To add one manually:
 
-To manually add systems to your map, follow these steps:
+1. Right-click an empty area of the map and choose **Add System**.
 
-1. **Access the Map Menu**:
-   - Right-click on the map and select the appropriate option to add a system manually.
+   ![Map context menu with Add System](../assets/img/map/add_system_popupmenu.png)
 
-   ![Add System](../assets/img/map/add_system_popupmenu.png)
+2. Type at least three characters of the system name.
 
-2. **Initiate System Search**:
-   - The search for a system begins as soon as the first three letters or numbers are typed.
+   ![System search showing systems starting with "ama"](../assets/img/map/add_system_search.png)
 
-   ![Add System Search](../assets/img/map/add_system_search.png)
+3. Choose the system in the list (here, Amamake), then click **ADD SYSTEM**.
 
-3. **Select and Add Your System**:
-   - Choose the desired system from the list (e.g., Amamake).
+   ![Amamake selected in the search dialog](../assets/img/map/add_system_amamake.png)
 
-   ![Add System Amamake](../assets/img/map/add_system_amamake.png)
+A notification confirms that the system was added.
 
-4. **Confirmation of Addition**:
-   - A success notification will appear upon successful addition of the system.
+![Notification: Amamake solar system successfully added](../assets/img/map/add_system_notification.png)
 
-   ![Success Notification Add system Amamake](../assets/img/map/add_system_notification.png)
+## Editing a system
 
-By following these steps, you can effectively add new systems to your map, ensuring your navigation setup remains current and comprehensive.
+Right-click a system to open its menu.
 
+![System menu with Set Destination, Lock and System Status](../assets/img/map/edit_system_context_menu.png)
 
-## Editing System and Connection
+### Set destination
 
-### Editing System
-To manage and update the system, you can edit it using the context menu options. Follow these steps to access and use these options effectively.
+**Set Destination** sets the system as your autopilot destination in the game.
 
-1. **Access the System**
-- **Right-click** on the system you wish to edit. A context menu will appear showing various options you can use.
+![Set Destination item in the system menu](../assets/img/map/menu_item_system_set_destination.png)
 
-  ![System Context Menu](../assets/img/map/edit_system_context_menu.png)
+![Destination set in the game](../assets/img/map/set_destination_in_game_view.png)
 
-2. **Available Options**
+### Lock a system
 
-- **Set to Destination**
-  - Open the context menu and `Set To Destination` menu item:
-  
-  ![Context Menu Item Set Destination](../assets/img/map/menu_item_system_set_destination.png)
+**Lock** protects a system: it can no longer be moved or deleted. A padlock appears on the system.
 
-  - This option sets the current system as a destination within the game. It's useful for navigation and planning.
+![Lock item in the system menu](../assets/img/map/menu_item_system_lock.png)
 
-  ![Set Destination In Game View](../assets/img/map/set_destination_in_game_view.png)
+![Locked system with a padlock](../assets/img/map/lock_system.png)
 
-- **Lock the System**
-  - Open the context menu and select the `Lock System`menu item:
+To remove the protection, choose **UnLock** in the same menu.
 
-  ![Context Menu Item Lock](../assets/img/map/menu_item_system_lock.png)
-  
-  - The system will be locked and appear as such on your map.
+![UnLock item in the system menu](../assets/img/map/menu_item_system_unlock.png)
 
-  ![System Locked](../assets/img/map/lock_system.png)
+### System status
 
-  - **Note:** Locking a system is useful to prevent accidental deletion or movement.
+**System Status** marks what you know about a system. The status is shown by the border colour of the system.
 
-- **UnLock the System**
-  - Open the context menu and select the `Unlock System`menu item:
+![System Status submenu](../assets/img/map/menu_item_system_status.png)
 
-  ![Context Menu Item Unlock](../assets/img/map/menu_item_system_unlock.png)
-  
-  - The system will be unlock and return to the normal state.
+| Status | Meaning | Appearance |
+|---|---|---|
+| **Unknown** | No information about this system | ![Unknown system](../assets/img/map/normal_system.png) |
+| **Occupied** | Occupied by potential enemies | ![Occupied system](../assets/img/map/occupied_system.png) |
+| **Hostile** | Enemies present | ![Hostile system](../assets/img/map/hostile_system.png) |
+| **Friendly** | Allies present | ![Friendly system](../assets/img/map/friendly_system.png) |
+| **Empty** | Nobody in the system | ![Empty system](../assets/img/map/empty_system.png) |
 
-  ![System Unlocked](../assets/img/map/normal_system.png)
+## Editing a connection
 
-#### Define System Status
-- Open the context menu and navigate to the `Status` menu item:
+Right-click a connection to open its menu.
 
-  ![Status Menu Item](../assets/img/map/menu_item_system_status.png)
+![Connection menu with EOL Status, Status and Size](../assets/img/map/edit_link_context_menu.png)
 
-- **Select the desired status from the following options:**
-  - **Unknown:** No information about this system.
-  
-    ![Normal System](../assets/img/map/normal_system.png)
-  - **Occupied:** The wormhole is occupied by potential enemies.
+### End of life
 
-    ![Occupied System](../assets/img/map/occupied_system.png)
-  - **Hostile:** The wormhole contains enemies.
+**EOL Status** sets how long the wormhole has left before it collapses.
 
-    ![Hostile System](../assets/img/map/hostile_system.png)
-  - **Friendly:** The wormhole contains allies.
+![EOL Status submenu](../assets/img/map/menu_item_link_eol_status.png)
 
-    ![Friendly System](../assets/img/map/friendly_system.png)
-  - **Empty:** The wormhole system is empty (green border).
+| EOL status | Meaning | Appearance |
+|---|---|---|
+| **Normal** | Not at end of life | ![Normal connection](../assets/img/map/normal_link.png) |
+| **EOL -4h** | About 4 hours left (dashed purple) | ![EOL -4h connection](../assets/img/map/eol_4h_link.png) |
+| **EOL -1h** | About 1 hour left (solid purple) | ![EOL -1h connection](../assets/img/map/eol_1h_link.png) |
 
-    ![Empty System](../assets/img/map/empty_system.png)
+### Mass status
 
+**Status** sets how much mass the wormhole has left.
 
-### Editing Connection
+![Status submenu](../assets/img/map/menu_item_link_status.png)
 
-To manage and update the links between systems effectively, you can edit system connections using the context menu options.
+| Status | Meaning | Appearance |
+|---|---|---|
+| **Normal** | Mass not reduced | ![Normal connection](../assets/img/map/normal_link.png) |
+| **Reduced** | Mass reduced | ![Reduced connection](../assets/img/map/critical_link.png) |
+| **Verge** | About to collapse | ![Verge connection](../assets/img/map/verge_link.png) |
 
-  1. **Access the Connection:**
-     - Right-click on the system connection you wish to edit. A context menu will appear.
-     
-     ![Link context menu](../assets/img/map/edit_link_context_menu.png)
+### Size
 
-  2. **Available Options:**
-  
-     - **Define Connection EOL Status:**
-       - Open the link context menu and navigate to `EOL Status`:
+**Size** sets the largest ship class that can jump through the wormhole.
 
-       ![EOL Status Menu Item](../assets/img/map/menu_item_link_eol_status.png)
+![Size submenu](../assets/img/map/menu_item_link_size.png)
 
-       - Select the desired EOL status:
-         - **Normal:** The connection is not approaching end of life.
-         - **EOL -4h:** The connection has approximately 4 hours remaining (dashed purple).
-           - ![EOL -4h link](../assets/img/map/eol_4h_link.png)
-         - **EOL -1h:** The connection has approximately 1 hour remaining (solid purple).
-           - ![EOL -1h link](../assets/img/map/eol_1h_link.png)
-  
-     - **Define Connection Status:**
-       - Open the link menu item for "Status" :
-       
-         ![Status menu item](../assets/img/map/menu_item_link_status.png)
-       
-       - Select the desired status:
-         - **Normal:** Regular mass status.
-           - ![Normal link](../assets/img/map/normal_link.png)
-         - **Reduced:** The wormhole's mass has been reduced.
-           - ![Reduced link](../assets/img/map/critical_link.png)
-         - **Verge:** The wormhole is on the verge of collapse.
-           - ![Verge link](../assets/img/map/verge_link.png)
-       
+| Size | Appearance |
+|---|---|
+| **Small** | ![Small connection](../assets/img/map/small_link.png) |
+| **Medium** | ![Medium connection](../assets/img/map/medium_link.png) |
+| **Large** (default) | ![Large connection](../assets/img/map/normal_link.png) |
+| **XLarge** | ![XLarge connection](../assets/img/map/extra_large_link.png) |
 
-     - **Define the Size of WH:**
-       - Open the link menu item for `Size` :
-         
-         ![Size menu item](../assets/img/map/menu_item_link_size.png)
+## Deleting systems
 
-       - Select the appropriate size:
-         - **Small**
-           - ![Small link](../assets/img/map/small_link.png)
-         - **Medium**
-           - ![Medium link](../assets/img/map/medium_link.png)
-         - **Large**
-           - ![Large link](../assets/img/map/normal_link.png)
-         - **Extra Large**
-           - ![Extra Large link](../assets/img/map/extra_large_link.png)
-       
-By utilizing these options, players can keep track of the status and characteristics of wormhole connections, facilitating better strategic planning and minimizing the risk of encountering unexpected changes in wormhole stability.
+1. Select the system, or several systems (see [Selecting multiple systems](#selecting-multiple-systems)).
+2. Press `Delete`.
 
-## Deleting Systems
+:::warning
+- There is **no confirmation**: check your selection before pressing `Delete`.
+- A locked system cannot be deleted. WHMapper shows a warning instead:
 
-1. **Select Systems:**
-   - Navigate to the map or list view where your systems are displayed.
-   - Click to highlight the systems you wish to delete. You can select multiple systems by holding down the `Ctrl` key while clicking on each system.
-
-2. **Delete Selected Systems:**
-   - Once you have selected the systems, simply press the `Del` (Delete) key on your keyboard.
-
-:::info
-   - **No Confirmation Message:** There will be no confirmation prompt before deletion. Ensure that you have selected the correct systems to avoid accidental deletion.
-   - **Locked System Warning:** If you attempt to delete a locked system, a warning notification will be displayed.
-   
-   ![Delete lock system warning notification](../assets/img/map/del_lock_system_notification.png)
+  ![Warning: the system is locked and cannot be removed](../assets/img/map/del_lock_system_notification.png)
 :::

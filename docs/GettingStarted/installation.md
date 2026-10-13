@@ -2,18 +2,17 @@
 id: installation
 title: Installation
 sidebar_position: 1
-description: Step-by-step installation guide for EVE Wormhole Mapper using Docker or Kubernetes.
+description: Step-by-step installation guide for EVE Wormhole Mapper using Docker or the pre-built binaries.
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Docker from "./_docker.md";
-import Kubernetes from "./_kubernetes.md";
 import SelfHosted from "./_selfhosted.md";
 
-## Technologies
+## Built with
 
-Eve Wormhole Mapper is written in C# using ASP.NET Core Blazor Server, EF Core, SignalR, and utilizes several third-party components, particularly:
+WHMapper is written in C# with ASP.NET Core Blazor Server, EF Core and SignalR, and uses these components:
 
 - [Blazor.DIAGRAMS](https://blazor-diagrams.zhaytam.com)
 - [MudBlazor](https://mudblazor.com)
@@ -26,12 +25,12 @@ We recommend using a domain name (your.domain.com) with public DNS for easy and 
 
 ### Register your app with CCP
 
-Eve-whmapper requires CCP's SSO authentication API to use the [ESI API](https://esi.evetech.net/ui/). Register your app at [developers.eveonline.com](https://developers.eveonline.com):
+WHMapper logs pilots in with CCP's SSO and reads their location through the [ESI API](https://esi.evetech.net/ui/). Register an application at [developers.eveonline.com](https://developers.eveonline.com):
 
 1. Click the **"MANAGE APPLICATIONS"** button.
 2. Click the **"CREATE NEW APPLICATION"** button.
 3. Choose a name for your installation (e.g., prod eve-whmapper).
-4. Enter a description for this installation (e.g., Eve Wormhole Mapper on production).
+4. Enter a description for this installation (e.g., WHMapper production).
 5. Change **"CONNECTION TYPE"** to **"Authentication & API Access"**.
 6. Add the minimum required **"PERMISSIONS"** (scopes):
    - `esi-location.read_location.v1`
@@ -45,23 +44,20 @@ Eve-whmapper requires CCP's SSO authentication API to use the [ESI API](https://
 
 ## Installation
 
-EVE WHMapper can be installed using Docker, Kubernetes, or directly on Linux/Windows using the pre-built binaries. Choose the installation method that best suits your environment.
+Install WHMapper with Docker (recommended), or directly on Linux or Windows with the pre-built binaries.
 
 <Tabs>
 <TabItem value="docker" label="Docker" default>
 <Docker/>
-</TabItem>
-<TabItem value="kubernetes" label="Kubernetes">
-<Kubernetes/>
 </TabItem>
 <TabItem value="selfhosted" label="Self-Hosted (Binary) ⚠️ Beta">
 <SelfHosted/>
 </TabItem>
 </Tabs>
 
-## Problems?
+## Need help?
 
-If you encounter any issues or need assistance, please ask for help on our [GitHub repository](https://github.com/pfh59/eve-whmapper).
+Ask on the [GitHub repository](https://github.com/pfh59/eve-whmapper/issues) or on the [EVE Online forum thread](https://forums.eveonline.com/t/whmapper/421061).
 
 ---
 
