@@ -178,9 +178,12 @@ article {
 /* ============================================================
    Tables
    ============================================================ */
+/* Infima renders tables as blocks (for horizontal scroll): size the block to its
+   content so the background does not extend past the last column. */
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   background-color: #22252d;
   border-radius: 6px;
   overflow: hidden;
