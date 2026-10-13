@@ -2,13 +2,12 @@
 id: installation
 title: Installation
 sidebar_position: 1
-description: Step-by-step installation guide for EVE Wormhole Mapper using Docker or Kubernetes.
+description: Step-by-step installation guide for EVE Wormhole Mapper using Docker or the pre-built binaries.
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Docker from "./_docker.md";
-import Kubernetes from "./_kubernetes.md";
 import SelfHosted from "./_selfhosted.md";
 
 ## Technologies
@@ -45,14 +44,11 @@ Eve-whmapper requires CCP's SSO authentication API to use the [ESI API](https://
 
 ## Installation
 
-EVE WHMapper can be installed using Docker, Kubernetes, or directly on Linux/Windows using the pre-built binaries. Choose the installation method that best suits your environment.
+EVE WHMapper can be installed using Docker, or directly on Linux/Windows using the pre-built binaries. Choose the installation method that best suits your environment.
 
 <Tabs>
 <TabItem value="docker" label="Docker" default>
 <Docker/>
-</TabItem>
-<TabItem value="kubernetes" label="Kubernetes">
-<Kubernetes/>
 </TabItem>
 <TabItem value="selfhosted" label="Self-Hosted (Binary) ⚠️ Beta">
 <SelfHosted/>
