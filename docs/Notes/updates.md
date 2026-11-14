@@ -9,7 +9,19 @@ All notable changes to EVE Wormhole Mapper are listed here. Full details are ava
 
 
 
-## EVE Wormhole Mapper v3.4.0 <span class="badge badge--success">Latest</span>
+## EVE Wormhole Mapper v3.4.1 <span class="badge badge--success">Latest</span>
+*Nov 14, 2026* · Read [**What's new in EVE-WHMAPPER v3.4.1**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.4.1)
+
+- **Instance**: name and description edits are now saved.
+- **Map**: a fresh install no longer creates an orphan "Default Maps" map or shows "Mapper Initialization error". New systems are no longer placed under the panel dock.
+- **Connection window**: size, mass and EOL status changes show right away, and links without jumps are shown too.
+- **UI**: full Thera badge, full-width Import Scan rows, fixed lock and autosave wording.
+
+:::info Upgrade notes
+No migration or configuration change — a drop-in upgrade from v3.4.0. An orphan "Default Maps" map (`WHInstanceId` is `NULL`) left by an earlier version is not removed automatically; you can delete it manually.
+:::
+
+## EVE Wormhole Mapper v3.4.0
 *Oct 12, 2026* · Read [**What's new in EVE-WHMAPPER v3.4.0**](https://github.com/pfh59/eve-whmapper/releases/tag/v3.4.0)
 
 - **Statistics module**: a new *Statistics* entry in the account menu shows the Top 10 Probers and Top 10 Explorers over the last 7 days, the last 30 days and all time, filtered by instance and map.
